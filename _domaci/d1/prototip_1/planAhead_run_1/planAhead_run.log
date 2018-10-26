@@ -1,0 +1,70 @@
+
+****** PlanAhead v14.7 (64-bit)
+  **** Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+    ** Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source /home/jigsaw/workspace/xilinx/_domaci/d1/prototip_1/pa.fromHdl.tcl
+# create_project -name prototip_1 -dir "/home/jigsaw/workspace/xilinx/_domaci/d1/prototip_1/planAhead_run_1" -part xc6slx45fgg676-2
+# set_param project.pinAheadLayout yes
+# set srcset [get_property srcset [current_run -impl]]
+# set_property target_constrs_file "prototip_1.ucf" [current_fileset -constrset]
+Adding file '/home/jigsaw/workspace/xilinx/_domaci/d1/prototip_1/prototip_1.ucf' to fileset 'constrs_1'
+# set hdlfile [add_files [list {prototip_1.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set_property top prototip_1 $srcset
+# add_files [list {prototip_1.ucf}] -fileset [get_property constrset [current_run]]
+# open_rtl_design -part xc6slx45fgg676-2
+Using Verific elaboration
+Parsing VHDL file "/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Parsing VHDL file "/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Parsing VHDL file "/home/jigsaw/workspace/xilinx/_domaci/d1/prototip_1/prototip_1.vhd" into library work
+Loading clock regions from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan6/spartan6lx/xc6slx45/ClockRegion.xml
+Loading clock buffers from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan6/spartan6lx/xc6slx45/ClockBuffers.xml
+Loading package pin functions from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan6/PinFunctions.xml...
+Loading package from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan6/spartan6lx/xc6slx45/fgg676/Package.xml
+Loading io standards from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan6/IOStandards.xml
+Loading device configuration modes from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan6/ConfigModes.xml
+Loading list of drcs for the architecture : /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan6/drc.xml
+Parsing UCF File [/home/jigsaw/workspace/xilinx/_domaci/d1/prototip_1/prototip_1.ucf]
+Finished Parsing UCF File [/home/jigsaw/workspace/xilinx/_domaci/d1/prototip_1/prototip_1.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: 86d5316d
+open_rtl_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 2824.945 ; gain = 158.957
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin W19 [get_ports iA]
+endgroup
+startgroup
+set_property package_pin Y24 [get_ports iB]
+endgroup
+set_property is_loc_fixed false [get_ports [list  iB]]
+set_property package_pin "" [get_ports [list  iC]]
+startgroup
+set_property package_pin N24 [get_ports oC]
+endgroup
+set_property package_pin "" [get_ports [list  oS]]
+set_property is_loc_fixed true [get_ports [list  iB]]
+set_property package_pin "" [get_ports [list  oS]]
+startgroup
+set_property package_pin N24 [get_ports oC]
+endgroup
+startgroup
+set_property package_pin L23 [get_ports oC]
+endgroup
+startgroup
+set_property package_pin N24 [get_ports oS]
+endgroup
+save_constraints
+exit
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Fri Oct 26 18:45:56 2018...
+INFO: [Common 17-83] Releasing license: PlanAhead

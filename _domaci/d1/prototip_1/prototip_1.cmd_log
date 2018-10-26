@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "/home/jigsaw/workspace/xilinx/_domaci/d1/prototip_1/prototip_1.xst" -ofn "/home/jigsaw/workspace/xilinx/_domaci/d1/prototip_1/prototip_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc prototip_1.ucf -p xc6slx45-fgg676-2 prototip_1.ngc prototip_1.ngd  
+map -intstyle ise -p xc6slx45-fgg676-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o prototip_1_map.ncd prototip_1.ngd prototip_1.pcf 
+par -w -intstyle ise -ol high -mt off prototip_1_map.ncd prototip_1.ncd prototip_1.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml prototip_1.twx prototip_1.ncd -o prototip_1.twr prototip_1.pcf -ucf prototip_1.ucf 
+bitgen -intstyle ise -f prototip_1.ut prototip_1.ncd 

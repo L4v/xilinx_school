@@ -41,6 +41,8 @@ architecture Behavioral of prototip_1 is
 
 begin
 
+oS <= (iA xor iB) xor iC;
+oC <= ((iA xor iB) and iC) or (iA and iB);
 
 end Behavioral;
 

@@ -1,0 +1,11 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Fri Oct 26 18:46:18 2018
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "oS" LOCATE = SITE "N24" LEVEL 1;
+COMP "iA" LOCATE = SITE "W19" LEVEL 1;
+COMP "iB" LOCATE = SITE "Y24" LEVEL 1;
+COMP "oC" LOCATE = SITE "L23" LEVEL 1;
+SCHEMATIC END;
+

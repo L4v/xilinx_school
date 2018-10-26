@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "/home/jigsaw/workspace/xilinx/_domaci/d1/prototip_1/prototip_1_tb_isim_beh.exe" -prj "/home/jigsaw/workspace/xilinx/_domaci/d1/prototip_1/prototip_1_tb_beh.prj" "work.prototip_1_tb" 

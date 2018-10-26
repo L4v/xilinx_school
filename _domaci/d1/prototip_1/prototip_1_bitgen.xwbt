@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/jigsaw/workspace/xilinx/_domaci/d1/prototip_1/prototip_1.ncd
+OUTFILE=/home/jigsaw/workspace/xilinx/_domaci/d1/prototip_1/prototip_1.bit
+FAMILY=Spartan6
+PART=xc6slx45-2fgg676
+WORKINGDIR=/home/jigsaw/workspace/xilinx/_domaci/d1/prototip_1
+LICENSE=WebPack
+USER_INFO=211619303_0_0_132

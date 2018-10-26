@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "/home/jigsaw/workspace/xilinx/_domaci/d1/cetBitniPuniSabirac/cetBitniPuniSabirac.xst" -ofn "/home/jigsaw/workspace/xilinx/_domaci/d1/cetBitniPuniSabirac/cetBitniPuniSabirac.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg676-2 cetBitniPuniSabirac.ngc cetBitniPuniSabirac.ngd  
+map -intstyle ise -p xc6slx45-fgg676-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o cetBitniPuniSabirac_map.ncd cetBitniPuniSabirac.ngd cetBitniPuniSabirac.pcf 
+par -w -intstyle ise -ol high -mt off cetBitniPuniSabirac_map.ncd cetBitniPuniSabirac.ncd cetBitniPuniSabirac.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml cetBitniPuniSabirac.twx cetBitniPuniSabirac.ncd -o cetBitniPuniSabirac.twr cetBitniPuniSabirac.pcf 
+bitgen -intstyle ise -f cetBitniPuniSabirac.ut cetBitniPuniSabirac.ncd 

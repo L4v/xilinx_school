@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Fri Oct 26 17:53:09 2018
+# Process ID: 2380
+# Log file: /home/jigsaw/workspace/xilinx/v02/zad01/planAhead_run_1/planAhead.log
+# Journal file: /home/jigsaw/workspace/xilinx/v02/zad01/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source /home/jigsaw/workspace/xilinx/v02/zad01/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin W19 [get_ports iA]
+endgroup
+startgroup
+set_property package_pin Y24 [get_ports iB]
+endgroup
+save_constraints

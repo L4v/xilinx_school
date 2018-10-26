@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "/home/jigsaw/workspace/xilinx/v01/MyFirstDigitalSystem/MyFirstDigitalSystem_tb_isim_beh.exe" -prj "/home/jigsaw/workspace/xilinx/v01/MyFirstDigitalSystem/MyFirstDigitalSystem_tb_beh.prj" "work.MyFirstDigitalSystem_tb" 

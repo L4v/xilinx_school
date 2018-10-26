@@ -1,0 +1,2 @@
+vhdl work "MyFirstDigitalSystem.vhf"
+vhdl work "MyFirstDigitalSystem_tb.vhd"

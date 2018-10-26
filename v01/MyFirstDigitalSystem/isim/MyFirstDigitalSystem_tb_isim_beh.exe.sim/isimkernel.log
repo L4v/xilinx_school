@@ -1,0 +1,29 @@
+Command line:
+   MyFirstDigitalSystem_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  47077
+
+Tue Oct 23 07:43:12 2018
+
+
+ Elaboration Time: 0.02 sec
+
+ Current Memory Usage: 185.655 Meg
+
+ Total Signals          : 37
+ Total Nets             : 29
+ Total Signal Drivers   : 4
+ Total Blocks           : 7
+ Total Primitive Blocks : 5
+ Total Processes        : 3
+ Total Traceable Variables  : 13
+ Total Scalar Nets and Variables : 512
+Total Line Count : 14
+
+ Total Simulation Time: 0.03 sec
+
+ Current Memory Usage: 261.157 Meg
+
+Tue Oct 23 07:43:51 2018
+

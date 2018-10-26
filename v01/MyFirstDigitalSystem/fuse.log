@@ -1,0 +1,26 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib secureip -o /home/jigsaw/workspace/xilinx/v01/MyFirstDigitalSystem/MyFirstDigitalSystem_tb_isim_beh.exe -prj /home/jigsaw/workspace/xilinx/v01/MyFirstDigitalSystem/MyFirstDigitalSystem_tb_beh.prj work.MyFirstDigitalSystem_tb 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Parsing VHDL file "/home/jigsaw/workspace/xilinx/v01/MyFirstDigitalSystem/MyFirstDigitalSystem.vhf" into library work
+Parsing VHDL file "/home/jigsaw/workspace/xilinx/v01/MyFirstDigitalSystem/MyFirstDigitalSystem_tb.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 102516 KB
+Fuse CPU Usage: 1140 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package vcomponents
+Compiling architecture and2_v of entity AND2 [and2_default]
+Compiling architecture inv_v of entity INV [inv_default]
+Compiling architecture behavioral of entity MyFirstDigitalSystem [myfirstdigitalsystem_default]
+Compiling architecture behavior of entity myfirstdigitalsystem_tb
+Time Resolution for simulation is 1ps.
+Waiting for 4 sub-compilation(s) to finish...
+Compiled 11 VHDL Units
+Built simulation executable /home/jigsaw/workspace/xilinx/v01/MyFirstDigitalSystem/MyFirstDigitalSystem_tb_isim_beh.exe
+Fuse Memory Usage: 413396 KB
+Fuse CPU Usage: 1240 ms
+GCC CPU Usage: 2180 ms

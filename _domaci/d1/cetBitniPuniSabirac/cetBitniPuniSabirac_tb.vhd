@@ -345,6 +345,16 @@ BEGIN
 		--iC1 <= '0';
 		wait for 100 ns;
 		
+	-- SLUCAJ 11
+		iA0 <= '0';
+		iB0 <= '1';
+		wait for 100 ns;
+		
+	-- SLUCAJ 12
+		iB0 <= '0';
+		iA1 <= '1';
+		wait for 100 ns;
+		
 		-- NASTAVITI
       wait;
    end process;

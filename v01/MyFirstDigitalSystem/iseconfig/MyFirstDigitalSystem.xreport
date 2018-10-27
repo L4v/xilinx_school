@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2018-10-26T17:18:55</DateModified>
+  <DateModified>2018-10-27T22:58:15</DateModified>
   <ModuleName>MyFirstDigitalSystem</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>/home/jigsaw/workspace/xilinx/v01/MyFirstDigitalSystem/iseconfig/MyFirstDigitalSystem.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/jigsaw/workspace/xilinx/v01/MyFirstDigitalSystem/</ImplementationReportsDirectory>
+  <SavedFilePath>/home/hk-47/workspace/xilinx/v01/MyFirstDigitalSystem/iseconfig/MyFirstDigitalSystem.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/hk-47/workspace/xilinx/v01/MyFirstDigitalSystem/</ImplementationReportsDirectory>
   <DateInitialized>2018-10-23T07:37:31</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2018-10-26T19:03:36</DateModified>
+  <DateModified>2018-10-27T23:00:15</DateModified>
   <ModuleName>cetBitniPuniSabirac</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>/home/jigsaw/workspace/xilinx/_domaci/d1/cetBitniPuniSabirac/iseconfig/cetBitniPuniSabirac.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/jigsaw/workspace/xilinx/_domaci/d1/cetBitniPuniSabirac</ImplementationReportsDirectory>
+  <SavedFilePath>/home/hk-47/workspace/xilinx/_domaci/d1/cetBitniPuniSabirac/iseconfig/cetBitniPuniSabirac.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/hk-47/workspace/xilinx/_domaci/d1/cetBitniPuniSabirac/</ImplementationReportsDirectory>
   <DateInitialized>2018-10-26T19:03:36</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

@@ -1,0 +1,29 @@
+Command line:
+   cbps00_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  57429
+
+Sun Oct 28 10:37:44 2018
+
+
+ Elaboration Time: 0.04 sec
+
+ Current Memory Usage: 185.754 Meg
+
+ Total Signals          : 53
+ Total Nets             : 33
+ Total Signal Drivers   : 8
+ Total Blocks           : 10
+ Total Primitive Blocks : 8
+ Total Processes        : 6
+ Total Traceable Variables  : 13
+ Total Scalar Nets and Variables : 516
+Total Line Count : 37
+
+ Total Simulation Time: 0.1 sec
+
+ Current Memory Usage: 261.255 Meg
+
+Sun Oct 28 10:38:35 2018
+

@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=/home/hk-47/workspace/xilinx/_domaci/d1/cetBitniPuniSabirac/cetBitniPuniSabirac.ncd
-OUTFILE=/home/hk-47/workspace/xilinx/_domaci/d1/cetBitniPuniSabirac/cetBitniPuniSabirac.bit
-FAMILY=Spartan6
-PART=xc6slx45-2fgg676
-WORKINGDIR=/home/hk-47/workspace/xilinx/_domaci/d1/cetBitniPuniSabirac
-LICENSE=WebPack
-USER_INFO=211619303_0_0_132

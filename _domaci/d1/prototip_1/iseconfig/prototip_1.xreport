@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2018-10-26T18:39:35</DateModified>
+  <DateModified>2018-10-28T11:26:39</DateModified>
   <ModuleName>prototip_1</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>/home/jigsaw/workspace/xilinx/_domaci/d1/prototip_1/iseconfig/prototip_1.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/jigsaw/workspace/xilinx/_domaci/d1/prototip_1</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>/home/jigsaw/workspace/xilinx/_domaci/d1/prototip_1/</ImplementationReportsDirectory>
   <DateInitialized>2018-10-26T18:39:35</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

@@ -1,0 +1,12 @@
+xst -intstyle ise -ifn "/home/jigsaw/workspace/xilinx/_domaci/d1/cbps01/cbps01.xst" -ofn "/home/jigsaw/workspace/xilinx/_domaci/d1/cbps01/cbps01.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg676-2 cbps01.ngc cbps01.ngd  
+map -intstyle ise -p xc6slx45-fgg676-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o cbps01_map.ncd cbps01.ngd cbps01.pcf 
+par -w -intstyle ise -ol high -mt off cbps01_map.ncd cbps01.ncd cbps01.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml cbps01.twx cbps01.ncd -o cbps01.twr cbps01.pcf 
+bitgen -intstyle ise -f cbps01.ut cbps01.ncd 
+xst -intstyle ise -ifn "/home/jigsaw/workspace/xilinx/_domaci/d1/cbps01/cbps01.xst" -ofn "/home/jigsaw/workspace/xilinx/_domaci/d1/cbps01/cbps01.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg676-2 cbps01.ngc cbps01.ngd  
+map -intstyle ise -p xc6slx45-fgg676-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o cbps01_map.ncd cbps01.ngd cbps01.pcf 
+par -w -intstyle ise -ol high -mt off cbps01_map.ncd cbps01.ncd cbps01.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml cbps01.twx cbps01.ncd -o cbps01.twr cbps01.pcf 
+bitgen -intstyle ise -f cbps01.ut cbps01.ncd 

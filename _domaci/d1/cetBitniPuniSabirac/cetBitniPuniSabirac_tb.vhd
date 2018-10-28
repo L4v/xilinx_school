@@ -122,10 +122,11 @@ BEGIN
    stim_proc: process
    begin	
 	
-		iC0 <= '0';
-		iC1 <= '0';
-		iC2 <= '0';
-		iC3 <= '0';
+		--iC0 <= '0';
+		--iC1 <= '0';
+		--iC2 <= '0';
+		--iC3 <= '0';
+		--sS0 <= '0';
 	
 	-- SLUCAJ 0
 		iA0 <= '0';
@@ -143,7 +144,7 @@ BEGIN
 		iA3 <= '0';
 		iB3 <= '0';
 		--iC1 <= '0';
-		wait for 100 ns;
+		wait for 10 ns;
 	
 	-- SLUCAJ 1
 		iA0 <= '1';
@@ -161,7 +162,7 @@ BEGIN
 		iA3 <= '0';
 		iB3 <= '0';
 		--iC1 <= '0';
-		wait for 100 ns;
+		wait for 10 ns;
 		
 	-- SLUCAJ 2
 		iA0 <= '0';
@@ -179,7 +180,7 @@ BEGIN
 		iA3 <= '0';
 		iB3 <= '0';
 		--iC1 <= '0';
-		wait for 100 ns;
+		wait for 10 ns;
 		
 	
 	-- SLUCAJ 3
@@ -198,7 +199,7 @@ BEGIN
 		iA3 <= '0';
 		iB3 <= '0';
 		--iC1 <= '0';
-		wait for 100 ns;
+		wait for 10 ns;
 
 	
 	-- SLUCAJ 4
@@ -217,7 +218,7 @@ BEGIN
 		iA3 <= '0';
 		iB3 <= '0';
 		--iC1 <= '0';
-		wait for 100 ns;
+		wait for 10 ns;
 	
 	-- SLUCAJ 5
 		iA0 <= '0';
@@ -235,7 +236,7 @@ BEGIN
 		iA3 <= '0';
 		iB3 <= '0';
 		--iC1 <= '0';
-		wait for 100 ns;
+		wait for 10 ns;
 	
 	-- SLUCAJ 6
 		iA0 <= '0';
@@ -253,7 +254,7 @@ BEGIN
 		iA3 <= '0';
 		iB3 <= '0';
 		--iC1 <= '0';
-		wait for 100 ns;
+		wait for 10 ns;
 	
 	-- SLUCAJ 7
 		iA0 <= '0';
@@ -271,7 +272,7 @@ BEGIN
 		iA3 <= '0';
 		iB3 <= '0';
 		--iC1 <= '0';
-		wait for 100 ns;
+		wait for 10 ns;
 	
 	-- SLUCAJ 8
 		iA0 <= '0';
@@ -289,7 +290,7 @@ BEGIN
 		iA3 <= '0';
 		iB3 <= '0';
 		--iC1 <= '0';
-		wait for 100 ns;
+		wait for 10 ns;
 	
 	-- SLUCAJ 8
 		iA0 <= '0';
@@ -307,7 +308,7 @@ BEGIN
 		iA3 <= '1';
 		iB3 <= '0';
 		--iC1 <= '0';
-		wait for 100 ns;
+		wait for 10 ns;
 	
 	-- SLUCAJ 9
 		iA0 <= '0';
@@ -325,7 +326,7 @@ BEGIN
 		iA3 <= '0';
 		iB3 <= '1';
 		--iC1 <= '0';
-		wait for 100 ns;
+		wait for 10 ns;
 	
 	-- SLUCAJ 10
 		iA0 <= '1';
@@ -343,17 +344,21 @@ BEGIN
 		iA3 <= '0';
 		iB3 <= '1';
 		--iC1 <= '0';
-		wait for 100 ns;
+		wait for 10 ns;
 		
 	-- SLUCAJ 11
 		iA0 <= '0';
 		iB0 <= '1';
-		wait for 100 ns;
+		wait for 10 ns;
 		
 	-- SLUCAJ 12
 		iB0 <= '0';
 		iA1 <= '1';
-		wait for 100 ns;
+		wait for 10 ns;
+		
+		iA1 <= '0';
+		iB1 <= '1';
+		wait for 10 ns;
 		
 		-- NASTAVITI
       wait;

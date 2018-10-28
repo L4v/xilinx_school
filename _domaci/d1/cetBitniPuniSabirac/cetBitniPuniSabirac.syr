@@ -4,15 +4,15 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> 
 Reading design: cetBitniPuniSabirac.prj
@@ -108,7 +108,7 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "/home/jigsaw/workspace/xilinx/_domaci/d1/cetBitniPuniSabirac/cetBitniPuniSabirac.vhd" into library work
+Parsing VHDL file "/home/hk-47/workspace/xilinx/_domaci/d1/cetBitniPuniSabirac/cetBitniPuniSabirac.vhd" into library work
 Parsing entity <cetBitniPuniSabirac>.
 Parsing architecture <Behavioral> of entity <cetbitnipunisabirac>.
 
@@ -117,13 +117,17 @@ Parsing architecture <Behavioral> of entity <cetbitnipunisabirac>.
 =========================================================================
 
 Elaborating entity <cetBitniPuniSabirac> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:1127 - "/home/hk-47/workspace/xilinx/_domaci/d1/cetBitniPuniSabirac/cetBitniPuniSabirac.vhd" Line 70: Assignment to ss1 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/hk-47/workspace/xilinx/_domaci/d1/cetBitniPuniSabirac/cetBitniPuniSabirac.vhd" Line 71: Assignment to ss2 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/hk-47/workspace/xilinx/_domaci/d1/cetBitniPuniSabirac/cetBitniPuniSabirac.vhd" Line 72: Assignment to ss3 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/hk-47/workspace/xilinx/_domaci/d1/cetBitniPuniSabirac/cetBitniPuniSabirac.vhd" Line 73: Assignment to ss4 ignored, since the identifier is never used
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <cetBitniPuniSabirac>.
-    Related source file is "/home/jigsaw/workspace/xilinx/_domaci/d1/cetBitniPuniSabirac/cetBitniPuniSabirac.vhd".
+    Related source file is "/home/hk-47/workspace/xilinx/_domaci/d1/cetBitniPuniSabirac/cetBitniPuniSabirac.vhd".
     Summary:
 Unit <cetBitniPuniSabirac> synthesized.
 
@@ -187,11 +191,11 @@ Top Level Output File Name         : cetBitniPuniSabirac.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 8
-#      LUT3                        : 8
-# IO Buffers                       : 20
+# BELS                             : 4
+#      LUT3                        : 4
+# IO Buffers                       : 16
 #      IBUF                        : 12
-#      OBUF                        : 8
+#      OBUF                        : 4
 
 Device utilization summary:
 ---------------------------
@@ -200,19 +204,19 @@ Selected Device : 6slx45fgg676-2
 
 
 Slice Logic Utilization: 
- Number of Slice LUTs:                    8  out of  27288     0%  
-    Number used as Logic:                 8  out of  27288     0%  
+ Number of Slice LUTs:                    4  out of  27288     0%  
+    Number used as Logic:                 4  out of  27288     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:      8
-   Number with an unused Flip Flop:       8  out of      8   100%  
-   Number with an unused LUT:             0  out of      8     0%  
-   Number of fully used LUT-FF pairs:     0  out of      8     0%  
+ Number of LUT Flip Flop pairs used:      4
+   Number with an unused Flip Flop:       4  out of      4   100%  
+   Number with an unused LUT:             0  out of      4     0%  
+   Number of fully used LUT-FF pairs:     0  out of      4     0%  
    Number of unique control sets:         0
 
 IO Utilization: 
  Number of IOs:                          20
- Number of bonded IOBs:                  20  out of    358     5%  
+ Number of bonded IOBs:                  16  out of    358     4%  
 
 Specific Feature Utilization:
 
@@ -247,7 +251,7 @@ Speed Grade: -2
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 6.110ns
+   Maximum combinational path delay: 6.066ns
 
 Timing Details:
 ---------------
@@ -255,22 +259,22 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 24 / 8
+  Total number of paths / destination ports: 12 / 4
 -------------------------------------------------------------------------
-Delay:               6.110ns (Levels of Logic = 3)
-  Source:            iB0 (PAD)
-  Destination:       oC0 (PAD)
+Delay:               6.066ns (Levels of Logic = 3)
+  Source:            iA0 (PAD)
+  Destination:       oS0 (PAD)
 
-  Data Path: iB0 to oC0
+  Data Path: iA0 to oS0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             2   1.328   0.954  iB0_IBUF (iB0_IBUF)
-     LUT3:I0->O            1   0.235   0.681  oC01 (oC0_OBUF)
-     OBUF:I->O                 2.912          oC0_OBUF (oC0)
+     IBUF:I->O             1   1.328   0.910  iA0_IBUF (iA0_IBUF)
+     LUT3:I0->O            1   0.235   0.681  oS01 (oS0_OBUF)
+     OBUF:I->O                 2.912          oS0_OBUF (oS0)
     ----------------------------------------
-    Total                      6.110ns (4.475ns logic, 1.635ns route)
-                                       (73.2% logic, 26.8% route)
+    Total                      6.066ns (4.475ns logic, 1.591ns route)
+                                       (73.8% logic, 26.2% route)
 
 =========================================================================
 
@@ -280,15 +284,15 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 5.08 secs
+Total REAL time to Xst completion: 18.00 secs
+Total CPU time to Xst completion: 17.03 secs
  
 --> 
 
 
-Total memory usage is 369868 kilobytes
+Total memory usage is 369968 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    0 (   0 filtered)
+Number of warnings :    4 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

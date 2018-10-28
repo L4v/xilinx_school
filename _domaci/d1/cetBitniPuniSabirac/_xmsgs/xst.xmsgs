@@ -5,5 +5,17 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/hk-47/workspace/xilinx/_domaci/d1/cetBitniPuniSabirac/cetBitniPuniSabirac.vhd" Line 70: Assignment to <arg fmt="%s" index="1">ss1</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/hk-47/workspace/xilinx/_domaci/d1/cetBitniPuniSabirac/cetBitniPuniSabirac.vhd" Line 71: Assignment to <arg fmt="%s" index="1">ss2</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/hk-47/workspace/xilinx/_domaci/d1/cetBitniPuniSabirac/cetBitniPuniSabirac.vhd" Line 72: Assignment to <arg fmt="%s" index="1">ss3</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/hk-47/workspace/xilinx/_domaci/d1/cetBitniPuniSabirac/cetBitniPuniSabirac.vhd" Line 73: Assignment to <arg fmt="%s" index="1">ss4</arg> ignored, since the identifier is never used
+</msg>
+
 </messages>
 

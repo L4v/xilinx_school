@@ -54,6 +54,12 @@ end cetBitniPuniSabirac;
 
 architecture Behavioral of cetBitniPuniSabirac is
 
+signal sS0 : STD_LOGIC;
+signal sS1 : STD_LOGIC;
+signal sS2 : STD_LOGIC;
+signal sS3 : STD_LOGIC;
+signal sS4 : STD_LOGIC;
+
 begin
 
 oS0 <= (iA0 xor iB0) xor iC0;
@@ -61,14 +67,22 @@ oS1 <= (iA1 xor iB1) xor iC1;
 oS2 <= (iA2 xor iB2) xor iC2;
 oS3 <= (iA3 xor iB3) xor iC3;
 
-oC0 <= ((iA0 xor iB0) and iC0) or (iA0 and iB0);
-oC1 <= ((iA1 xor iB1) and iC1) or (iA1 and iB1);
-oC2 <= ((iA2 xor iB2) and iC2) or (iA2 and iB2);
-oC3 <= ((iA3 xor iB3) and iC3) or (iA3 and iB3);
+sS1 <= ((iA0 xor iB0) and iC0) or (iA0 and iB0);
+sS2 <= ((iA1 xor iB1) and iC1) or (iA1 and iB1);
+sS3 <= ((iA2 xor iB2) and iC2) or (iA2 and iB2);
+sS4 <= ((iA3 xor iB3) and iC3) or (iA3 and iB3);
 
-iC1 <= oC0;
-iC2 <= oC1;
-iC3 <= oC2;
+--iC0 <= sS0;
+--sS1 <= oC0;
+
+--iC1 <= sS1;
+--sS2 <= oC1;
+
+--iC2 <= sS2;
+--sS3 <= oC2;
+
+--iC3 <= sS3;
+--sS4 <= oC3;
 
 end Behavioral;
 

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "/home/hk-47/workspace/xilinx/_domaci/d1/cetBitniPuniSabirac/cetBitniPuniSabirac_tb_isim_beh.exe" -prj "/home/hk-47/workspace/xilinx/_domaci/d1/cetBitniPuniSabirac/cetBitniPuniSabirac_tb_beh.prj" "work.cetBitniPuniSabirac_tb" 

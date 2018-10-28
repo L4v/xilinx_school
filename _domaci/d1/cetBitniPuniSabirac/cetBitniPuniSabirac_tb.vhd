@@ -355,10 +355,110 @@ BEGIN
 		iB0 <= '0';
 		iA1 <= '1';
 		wait for 10 ns;
-		
+	-- SLUCAJ 13
 		iA1 <= '0';
 		iB1 <= '1';
 		wait for 10 ns;
+	-- SLUCAJ 14
+		iB1 <= '0';
+		iA2 <= '1';
+		wait for 10 ns;
+	-- SLUCAJ 15
+		iA2 <= '0';
+		iB2 <= '1';
+		wait for 10 ns;
+	-- SLUCAJ 16
+		iB2 <= '0';
+		iA3 <= '1';
+		wait for 10 ns;
+	-- SLUCAJ 17
+		iA0 <= '1';
+		wait for 10 ns;
+	-- SLUCAJ 18
+		iA0 <= '0';
+		iB0 <= '1';
+		wait for 10 ns;
+	-- SLUCAJ 19
+		iB0 <= '0';
+		iA1 <= '1';
+		wait for 10 ns;
+	-- SLUCAJ 20
+		iA1 <= '0';
+		iB1 <= '1';
+		wait for 10 ns;
+	-- SLUCAJ 21
+		iB1 <= '0';
+		iA2 <= '1';
+		wait for 10 ns;
+	-- SLUCAJ 22
+		iA2 <= '0';
+		iB2 <= '1';
+		wait for 10 ns;
+	-- SLUCAJ 23
+		iA0 <= '1';
+		wait for 10 ns;
+	-- SLUCAJ 24
+		iA0 <= '0';
+		iB0 <= '1';
+		wait for 10 ns;
+	-- SLUCAJ 25
+		iB0 <= '0';
+		iA1 <= '1';
+		wait for 10 ns;
+	-- SLUCAJ 26
+		iA1 <= '0';
+		iB1 <= '1';
+		wait for 10 ns;
+	-- SLUCAJ 27
+		iB1 <= '0';
+		iA2 <= '1';
+		wait for 10 ns;
+	-- SLUCAJ 28
+		iA0 <= '1';
+		wait for 10 ns;
+	-- SLUCAJ 29
+		iA0 <= '0';
+		iB0 <= '1';
+		wait for 10 ns;
+	-- SLUCAJ 30
+		iB0 <= '0';
+		iA1 <= '1';
+		wait for 10 ns;
+	-- SLUCAJ 31
+		iA1 <= '0';
+		iB1 <= '1';
+		wait for 10 ns;
+	-- SLUCAJ 32
+		iA0 <= '1';
+		wait for 10 ns;
+	-- SLUCAJ 33
+		iA0 <= '0';
+		iB0 <= '1';
+		wait for 10 ns;
+	-- SLUCAJ 34
+		iB0 <= '0';
+		iA1 <= '1';
+		wait for 10 ns;
+	-- SLUCAJ 35
+		iA0 <= '1';
+		wait for 10 ns;
+	-- SLUCAJ 36
+		iA0 <= '0';
+		iB0 <= '1';
+		wait for 10 ns;
+	-- SLUCAJ 37
+		iB0 <= '0';
+		iA1 <= '1';
+		wait for 10 ns;
+	-- SLUCAJ 38
+		iA0 <= '1';
+		wait for 10 ns;
+	-- SLUCAJ 39
+		iA0 <= '0';
+		iB0 <= '1';
+		wait for 10 ns;
+	-- SLUCAJ 40
+		iA0 <= '1';
 		
 		-- NASTAVITI
       wait;

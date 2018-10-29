@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2018-10-28T10:37:29</DateModified>
+  <DateModified>2018-10-28T12:37:11</DateModified>
   <ModuleName>cbps00</ModuleName>
   <SummaryTimeStamp>2018-10-28T10:32:09</SummaryTimeStamp>
   <SavedFilePath>/home/hk-47/workspace/xilinx/_domaci/d1/cbps00/iseconfig/cbps00.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/hk-47/workspace/xilinx/_domaci/d1/cbps00</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>/home/hk-47/workspace/xilinx/_domaci/d1/cbps00/</ImplementationReportsDirectory>
   <DateInitialized>2018-10-28T10:13:32</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

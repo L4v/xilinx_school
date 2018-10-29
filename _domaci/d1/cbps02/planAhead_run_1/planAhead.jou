@@ -1,0 +1,51 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Sun Oct 28 19:38:11 2018
+# Process ID: 1049
+# Log file: /home/hk-47/workspace/xilinx/_domaci/d1/cbps02/planAhead_run_1/planAhead.log
+# Journal file: /home/hk-47/workspace/xilinx/_domaci/d1/cbps02/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source /home/hk-47/workspace/xilinx/_domaci/d1/cbps02/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin W19 [get_ports iA0]
+endgroup
+startgroup
+set_property package_pin Y24 [get_ports iA1]
+endgroup
+startgroup
+set_property package_pin K19 [get_ports iA2]
+endgroup
+startgroup
+set_property package_pin V24 [get_ports iA3]
+endgroup
+startgroup
+set_property package_pin U20 [get_ports iB0]
+endgroup
+startgroup
+set_property package_pin U23 [get_ports iB1]
+endgroup
+startgroup
+set_property package_pin U24 [get_ports iB2]
+endgroup
+startgroup
+set_property package_pin U19 [get_ports iB3]
+endgroup
+startgroup
+set_property package_pin L23 [get_ports oC]
+endgroup
+startgroup
+set_property package_pin N24 [get_ports oS0]
+endgroup
+startgroup
+set_property package_pin N23 [get_ports oS1]
+endgroup
+startgroup
+set_property package_pin M24 [get_ports oS2]
+endgroup
+startgroup
+set_property package_pin L24 [get_ports oS3]
+endgroup
+save_constraints

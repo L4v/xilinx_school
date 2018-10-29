@@ -57,6 +57,10 @@
     </file>
     <file xil_pn:fileType="FILE_XPI" xil_pn:name="cbps00.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="cbps00.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="cbps00_cbps00_sch_tb_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="cbps00_cbps00_sch_tb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="cbps00_cbps00_sch_tb_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="cbps00_envsettings.html"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="cbps00_guide.ncd" xil_pn:origination="imported"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="cbps00_map.map" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="cbps00_map.mrp" xil_pn:subbranch="Map"/>
@@ -69,9 +73,10 @@
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="cbps00_par.xrpt"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="cbps00_summary.html"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="cbps00_summary.xml"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="cbps00_tb_beh.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="cbps00_tb_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="cbps00_tb_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="cbps00_tb_isim_beh.wdb"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="cbps00_tb_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="cbps00_usage.xml"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="cbps00_xst.xrpt"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
@@ -89,17 +94,18 @@
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
     <transform xil_pn:end_ts="1540718706" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1540718706">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1540719457" xil_pn:in_ck="4230435603006724045" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1540719457">
+    <transform xil_pn:end_ts="1540722128" xil_pn:in_ck="4230435603006724045" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1540722128">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="cbps00_tb.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1540719232" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="1369500987706348627" xil_pn:start_ts="1540719232">
+    <transform xil_pn:end_ts="1540721864" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-3221170641113803740" xil_pn:start_ts="1540721864">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1540719234" xil_pn:in_ck="4737488722015604" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-812475449877582127" xil_pn:start_ts="1540719232">
+    <transform xil_pn:end_ts="1540721866" xil_pn:in_ck="4737488722015604" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="8928620670360203426" xil_pn:start_ts="1540721864">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="cbps00.vhf"/>
@@ -108,35 +114,41 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1540719457" xil_pn:in_ck="-3621579754861941529" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1540719457">
+    <transform xil_pn:end_ts="1540722128" xil_pn:in_ck="-3621579754861941529" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1540722128">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="cbps00.vhf"/>
       <outfile xil_pn:name="cbps00_tb.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1540719460" xil_pn:in_ck="-3621579754861941529" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-7296518219708410330" xil_pn:start_ts="1540719457">
+    <transform xil_pn:end_ts="1540722132" xil_pn:in_ck="-3621579754861941529" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-7692077130390010629" xil_pn:start_ts="1540722128">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="cbps00_tb_beh.prj"/>
-      <outfile xil_pn:name="cbps00_tb_isim_beh.exe"/>
+      <outfile xil_pn:name="cbps00_cbps00_sch_tb_beh.prj"/>
+      <outfile xil_pn:name="cbps00_cbps00_sch_tb_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1540719461" xil_pn:in_ck="-2252721868876631220" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="1079338699476893043" xil_pn:start_ts="1540719460">
+    <transform xil_pn:end_ts="1540722132" xil_pn:in_ck="-2347055311636891280" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-6806116960673172664" xil_pn:start_ts="1540722132">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="cbps00_tb_isim_beh.wdb"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="cbps00_cbps00_sch_tb_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
     </transform>
     <transform xil_pn:end_ts="1540718993" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1540718993">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1540718995" xil_pn:in_ck="4737488722015604" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="1516781508086847315" xil_pn:start_ts="1540718993">
+    <transform xil_pn:end_ts="1540720902" xil_pn:in_ck="4737488722015604" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="1516781508086847315" xil_pn:start_ts="1540720900">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="cbps00.vhf"/>
@@ -161,7 +173,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1540719021" xil_pn:in_ck="4737488722019034" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="6685118376836744125" xil_pn:start_ts="1540718995">
+    <transform xil_pn:end_ts="1540721524" xil_pn:in_ck="4737488722019034" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="6685118376836744125" xil_pn:start_ts="1540721503">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -175,6 +187,8 @@
       <outfile xil_pn:name="cbps00.stx"/>
       <outfile xil_pn:name="cbps00.syr"/>
       <outfile xil_pn:name="cbps00.xst"/>
+      <outfile xil_pn:name="cbps00_tb_beh.prj"/>
+      <outfile xil_pn:name="cbps00_tb_stx_beh.prj"/>
       <outfile xil_pn:name="cbps00_xst.xrpt"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
@@ -183,7 +197,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1540719036" xil_pn:in_ck="4737488722010286" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-4972040272371877233" xil_pn:start_ts="1540719021">
+    <transform xil_pn:end_ts="1540721540" xil_pn:in_ck="4737488722010286" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-4972040272371877233" xil_pn:start_ts="1540721524">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_ngo"/>
@@ -192,7 +206,7 @@
       <outfile xil_pn:name="cbps00.ngd"/>
       <outfile xil_pn:name="cbps00_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1540719063" xil_pn:in_ck="4737488722010287" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="-2489532510156203999" xil_pn:start_ts="1540719036">
+    <transform xil_pn:end_ts="1540721570" xil_pn:in_ck="4737488722010287" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="-2489532510156203999" xil_pn:start_ts="1540721540">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -207,7 +221,7 @@
       <outfile xil_pn:name="cbps00_summary.xml"/>
       <outfile xil_pn:name="cbps00_usage.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1540719101" xil_pn:in_ck="-7969577699458240696" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-3829590541433901613" xil_pn:start_ts="1540719063">
+    <transform xil_pn:end_ts="1540721612" xil_pn:in_ck="-7969577699458240696" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-3829590541433901613" xil_pn:start_ts="1540721570">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
@@ -221,9 +235,10 @@
       <outfile xil_pn:name="cbps00_pad.txt"/>
       <outfile xil_pn:name="cbps00_par.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1540719129" xil_pn:in_ck="4737488722010155" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="396117104113915555" xil_pn:start_ts="1540719101">
+    <transform xil_pn:end_ts="1540721642" xil_pn:in_ck="4737488722010155" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="396117104113915555" xil_pn:start_ts="1540721612">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
       <outfile xil_pn:name="cbps00.bgn"/>
       <outfile xil_pn:name="cbps00.bit"/>
@@ -233,7 +248,7 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1540719101" xil_pn:in_ck="4737488722010155" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416184" xil_pn:start_ts="1540719088">
+    <transform xil_pn:end_ts="1540721612" xil_pn:in_ck="4737488722010155" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416184" xil_pn:start_ts="1540721597">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>

@@ -1,0 +1,16 @@
+
+# PlanAhead Generated physical constraints 
+
+NET "iA0" LOC = W19;
+NET "iA1" LOC = Y24;
+NET "iA2" LOC = K19;
+NET "iA3" LOC = V24;
+NET "iB0" LOC = U20;
+NET "iB1" LOC = U23;
+NET "iB2" LOC = U24;
+NET "iB3" LOC = U19;
+NET "oC" LOC = L23;
+NET "oS0" LOC = N24;
+NET "oS1" LOC = N23;
+NET "oS2" LOC = M24;
+NET "oS3" LOC = L24;

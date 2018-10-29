@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : cbps02.vhf
--- /___/   /\     Timestamp : 10/28/2018 12:12:33
+-- /___/   /\     Timestamp : 10/28/2018 19:38:04
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl /home/jigsaw/workspace/xilinx/_domaci/d1/cbps02/cbps02.vhf -w /home/jigsaw/workspace/xilinx/_domaci/d1/cbps02/cbps02.sch
+--Command: sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl /home/hk-47/workspace/xilinx/_domaci/d1/cbps02/cbps02.vhf -w /home/hk-47/workspace/xilinx/_domaci/d1/cbps02/cbps02.sch
 --Design Name: cbps02
 --Device: spartan6
 --Purpose:
@@ -34,7 +34,6 @@ entity cbps02 is
           iB1 : in    std_logic; 
           iB2 : in    std_logic; 
           iB3 : in    std_logic; 
-          iC0 : in    std_logic; 
           oC  : out   std_logic; 
           oS0 : out   std_logic; 
           oS1 : out   std_logic; 
@@ -44,21 +43,22 @@ end cbps02;
 
 architecture BEHAVIORAL of cbps02 is
    attribute BOX_TYPE   : string ;
-   signal XLXN_5   : std_logic;
-   signal XLXN_9   : std_logic;
-   signal XLXN_10  : std_logic;
-   signal XLXN_26  : std_logic;
-   signal XLXN_27  : std_logic;
-   signal XLXN_32  : std_logic;
-   signal XLXN_33  : std_logic;
-   signal XLXN_34  : std_logic;
-   signal XLXN_39  : std_logic;
-   signal XLXN_40  : std_logic;
-   signal XLXN_41  : std_logic;
-   signal XLXN_46  : std_logic;
-   signal XLXN_52  : std_logic;
-   signal XLXN_53  : std_logic;
-   signal oC_DUMMY : std_logic;
+   signal XLXN_5  : std_logic;
+   signal XLXN_9  : std_logic;
+   signal XLXN_10 : std_logic;
+   signal XLXN_26 : std_logic;
+   signal XLXN_27 : std_logic;
+   signal XLXN_32 : std_logic;
+   signal XLXN_33 : std_logic;
+   signal XLXN_34 : std_logic;
+   signal XLXN_39 : std_logic;
+   signal XLXN_40 : std_logic;
+   signal XLXN_41 : std_logic;
+   signal XLXN_46 : std_logic;
+   signal XLXN_52 : std_logic;
+   signal XLXN_53 : std_logic;
+   signal XLXN_55 : std_logic;
+   signal XLXN_57 : std_logic;
    component XOR2
       port ( I0 : in    std_logic; 
              I1 : in    std_logic; 
@@ -80,20 +80,24 @@ architecture BEHAVIORAL of cbps02 is
    end component;
    attribute BOX_TYPE of OR2 : component is "BLACK_BOX";
    
+   component GND
+      port ( G : out   std_logic);
+   end component;
+   attribute BOX_TYPE of GND : component is "BLACK_BOX";
+   
 begin
-   oC <= oC_DUMMY;
    XLXI_1 : XOR2
       port map (I0=>iB0,
                 I1=>iA0,
                 O=>XLXN_5);
    
    XLXI_2 : XOR2
-      port map (I0=>iC0,
+      port map (I0=>XLXN_57,
                 I1=>XLXN_5,
                 O=>oS0);
    
    XLXI_3 : AND2
-      port map (I0=>iC0,
+      port map (I0=>XLXN_57,
                 I1=>XLXN_5,
                 O=>XLXN_10);
    
@@ -105,7 +109,7 @@ begin
    XLXI_5 : OR2
       port map (I0=>XLXN_9,
                 I1=>XLXN_10,
-                O=>oC_DUMMY);
+                O=>XLXN_55);
    
    XLXI_11 : XOR2
       port map (I0=>iB1,
@@ -113,12 +117,12 @@ begin
                 O=>XLXN_32);
    
    XLXI_12 : XOR2
-      port map (I0=>oC_DUMMY,
+      port map (I0=>XLXN_55,
                 I1=>XLXN_32,
                 O=>oS1);
    
    XLXI_13 : AND2
-      port map (I0=>oC_DUMMY,
+      port map (I0=>XLXN_55,
                 I1=>XLXN_32,
                 O=>XLXN_26);
    
@@ -180,7 +184,10 @@ begin
    XLXI_25 : OR2
       port map (I0=>XLXN_41,
                 I1=>XLXN_40,
-                O=>oC_DUMMY);
+                O=>oC);
+   
+   XLXI_26 : GND
+      port map (G=>XLXN_57);
    
 end BEHAVIORAL;
 

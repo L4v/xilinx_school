@@ -1,0 +1,10 @@
+sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl cbps02.vhf -w /home/hk-47/workspace/xilinx/_domaci/d1/cbps02/cbps02.sch 
+sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl cbps02.vhf -w /home/hk-47/workspace/xilinx/_domaci/d1/cbps02/cbps02.sch 
+sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl cbps02.vhf -w /home/hk-47/workspace/xilinx/_domaci/d1/cbps02/cbps02.sch 
+sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl cbps02.vhf -w /home/hk-47/workspace/xilinx/_domaci/d1/cbps02/cbps02.sch 
+xst -intstyle ise -ifn "/home/hk-47/workspace/xilinx/_domaci/d1/cbps02/cbps02.xst" -ofn "/home/hk-47/workspace/xilinx/_domaci/d1/cbps02/cbps02.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cbps02.ucf -p xc6slx45-fgg676-2 cbps02.ngc cbps02.ngd  
+map -intstyle ise -p xc6slx45-fgg676-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o cbps02_map.ncd cbps02.ngd cbps02.pcf 
+par -w -intstyle ise -ol high -mt off cbps02_map.ncd cbps02.ncd cbps02.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml cbps02.twx cbps02.ncd -o cbps02.twr cbps02.pcf -ucf cbps02.ucf 
+bitgen -intstyle ise -f cbps02.ut cbps02.ncd 

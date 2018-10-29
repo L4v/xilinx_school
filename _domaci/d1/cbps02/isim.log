@@ -1,5 +1,5 @@
 ISim log file
-Running: /home/jigsaw/workspace/xilinx/_domaci/d1/cbps02/cbps02_cbps02_sch_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/jigsaw/workspace/xilinx/_domaci/d1/cbps02/cbps02_cbps02_sch_tb_isim_beh.wdb 
+Running: /home/hk-47/workspace/xilinx/_domaci/d1/cbps02/cbps02_cbps02_sch_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/hk-47/workspace/xilinx/_domaci/d1/cbps02/cbps02_cbps02_sch_tb_isim_beh.wdb 
 ISim P.20131013 (signature 0xfbc00daa)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.

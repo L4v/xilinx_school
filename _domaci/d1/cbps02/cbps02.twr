@@ -1,0 +1,80 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 2 -n
+3 -fastpaths -xml cbps02.twx cbps02.ncd -o cbps02.twr cbps02.pcf -ucf
+cbps02.ucf
+
+Design file:              cbps02.ncd
+Physical constraint file: cbps02.pcf
+Device,package,speed:     xc6slx45,fgg676,C,-2 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+iA0            |oC             |   14.849|
+iA0            |oS0            |   12.755|
+iA0            |oS1            |   12.825|
+iA0            |oS2            |   15.484|
+iA0            |oS3            |   14.952|
+iA1            |oC             |   12.496|
+iA1            |oS1            |    9.958|
+iA1            |oS2            |   13.131|
+iA1            |oS3            |   12.599|
+iA2            |oC             |   13.505|
+iA2            |oS2            |   13.499|
+iA2            |oS3            |   13.608|
+iA3            |oC             |   11.216|
+iA3            |oS3            |   10.953|
+iB0            |oC             |   14.074|
+iB0            |oS0            |   12.274|
+iB0            |oS1            |   12.050|
+iB0            |oS2            |   14.709|
+iB0            |oS3            |   14.177|
+iB1            |oC             |   13.677|
+iB1            |oS1            |   11.139|
+iB1            |oS2            |   14.312|
+iB1            |oS3            |   13.780|
+iB2            |oC             |   12.939|
+iB2            |oS2            |   12.933|
+iB2            |oS3            |   13.042|
+iB3            |oC             |   14.035|
+iB3            |oS3            |   13.772|
+---------------+---------------+---------+
+
+
+Analysis completed Sun Oct 28 19:45:15 2018 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 425 MB
+
+
+

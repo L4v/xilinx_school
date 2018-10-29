@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "secureip" -o "/home/jigsaw/workspace/xilinx/_domaci/d1/cbps02/cbps02_cbps02_sch_tb_isim_beh.exe" -prj "/home/jigsaw/workspace/xilinx/_domaci/d1/cbps02/cbps02_cbps02_sch_tb_beh.prj" "work.cbps02_cbps02_sch_tb" 
+-intstyle "ise" -incremental -lib "secureip" -o "/home/hk-47/workspace/xilinx/_domaci/d1/cbps02/cbps02_cbps02_sch_tb_isim_beh.exe" -prj "/home/hk-47/workspace/xilinx/_domaci/d1/cbps02/cbps02_cbps02_sch_tb_beh.prj" "work.cbps02_cbps02_sch_tb" 

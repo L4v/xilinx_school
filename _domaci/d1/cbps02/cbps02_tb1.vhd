@@ -1,5 +1,5 @@
 -- Vhdl test bench created from schematic /home/jigsaw/workspace/xilinx/_domaci/d1/cbps02/cbps02.sch - Sun Oct 28 12:12:19 2018
---
+-- AUTOR: JOVAN IVOSEVIC RA30/2017
 -- Notes: 
 -- 1) This testbench template has been automatically generated using types
 -- std_logic and std_logic_vector for the ports of the unit under test.
@@ -24,7 +24,7 @@ ARCHITECTURE behavioral OF cbps02_cbps02_sch_tb IS
    COMPONENT cbps02
    PORT( iA0	:	IN	STD_LOGIC; 
           iB0	:	IN	STD_LOGIC; 
-          iC0	:	IN	STD_LOGIC; 
+     --     iC0	:	IN	STD_LOGIC; 
           oS0	:	OUT	STD_LOGIC; 
           oC	:	OUT	STD_LOGIC; 
           oS1	:	OUT	STD_LOGIC; 
@@ -40,7 +40,7 @@ ARCHITECTURE behavioral OF cbps02_cbps02_sch_tb IS
 
    SIGNAL iA0	:	STD_LOGIC;
    SIGNAL iB0	:	STD_LOGIC;
-   SIGNAL iC0	:	STD_LOGIC;
+   --SIGNAL iC0	:	STD_LOGIC;
    SIGNAL oS0	:	STD_LOGIC;
    SIGNAL oC	:	STD_LOGIC;
    SIGNAL oS1	:	STD_LOGIC;
@@ -58,7 +58,7 @@ BEGIN
    UUT: cbps02 PORT MAP(
 		iA0 => iA0, 
 		iB0 => iB0, 
-		iC0 => iC0, 
+		--iC0 => iC0, 
 		oS0 => oS0, 
 		oC => oC, 
 		oS1 => oS1, 
@@ -75,6 +75,62 @@ BEGIN
 -- *** Test Bench - User Defined Section ***
    tb : PROCESS
    BEGIN
+		
+		iA0 <= '0';
+		iB0 <= '0';
+		--iC0 <= '0';
+		iA1 <= '0';
+		iB1 <= '0';
+		iA2 <= '0';
+		iB2 <= '0';
+		iA3 <= '0';
+		iB3 <= '0';
+		wait for 100 ns;
+		
+		iA0 <= '1';
+		iB0 <= '1';
+		--iC0 <= '0';
+		iA1 <= '0';
+		iB1 <= '0';
+		iA2 <= '1';
+		iB2 <= '0';
+		iA3 <= '0';
+		iB3 <= '0';
+		wait for 100 ns;
+		
+		iA0 <= '1';
+		iB0 <= '1';
+		--iC0 <= '1';
+		iA1 <= '0';
+		iB1 <= '0';
+		iA2 <= '0';
+		iB2 <= '0';
+		iA3 <= '0';
+		iB3 <= '0';
+		wait for 100 ns;
+		
+		iA0 <= '1';
+		iB0 <= '1';
+		--iC0 <= '1';
+		iA1 <= '0';
+		iB1 <= '0';
+		iA2 <= '1';
+		iB2 <= '1';
+		iA3 <= '0';
+		iB3 <= '0';
+		wait for 100 ns;
+		
+		iA0 <= '1';
+		iB0 <= '1';
+		--iC0 <= '1';
+		iA1 <= '1';
+		iB1 <= '1';
+		iA2 <= '1';
+		iB2 <= '1';
+		iA3 <= '1';
+		iB3 <= '1';
+		wait for 100 ns;
+	
       WAIT; -- will wait forever
    END PROCESS;
 -- *** End Test Bench - User Defined Section ***

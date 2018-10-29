@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Interface Version="1" Minor="1">
+	<Ifc Id="ROOT" Top="1">
+		<Port Id="iA0" Dir="IN"/>
+		<Port Id="iA1" Dir="IN"/>
+		<Port Id="iA2" Dir="IN"/>
+		<Port Id="iA3" Dir="IN"/>
+		<Port Id="iB0" Dir="IN"/>
+		<Port Id="iB1" Dir="IN"/>
+		<Port Id="iB2" Dir="IN"/>
+		<Port Id="iB3" Dir="IN"/>
+		<Port Id="oC" Dir="OUT"/>
+		<Port Id="oS0" Dir="OUT"/>
+		<Port Id="oS1" Dir="OUT"/>
+		<Port Id="oS2" Dir="OUT"/>
+		<Port Id="oS3" Dir="OUT"/>
+	</Ifc>
+</Interface>
+

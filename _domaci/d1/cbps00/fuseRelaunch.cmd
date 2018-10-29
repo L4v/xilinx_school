@@ -1,1 +1,0 @@
--intstyle "ise" -incremental -lib "secureip" -o "/home/hk-47/workspace/xilinx/_domaci/d1/cbps00/cbps00_cbps00_sch_tb_isim_beh.exe" -prj "/home/hk-47/workspace/xilinx/_domaci/d1/cbps00/cbps00_cbps00_sch_tb_beh.prj" "work.cbps00_cbps00_sch_tb" 

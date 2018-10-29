@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=/home/hk-47/workspace/xilinx/_domaci/d1/cbps00/cbps00.ncd
-OUTFILE=/home/hk-47/workspace/xilinx/_domaci/d1/cbps00/cbps00.bit
-FAMILY=Spartan6
-PART=xc6slx45-2fgg676
-WORKINGDIR=/home/hk-47/workspace/xilinx/_domaci/d1/cbps00
-LICENSE=WebPack
-USER_INFO=211619303_0_0_132

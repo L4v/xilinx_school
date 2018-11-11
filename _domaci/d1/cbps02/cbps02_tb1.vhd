@@ -130,6 +130,17 @@ BEGIN
 		iA3 <= '1';
 		iB3 <= '1';
 		wait for 100 ns;
+		
+		iA0 <= '1';
+		iB0 <= '1';
+		--iC0 <= '1';
+		iA1 <= '0';
+		iB1 <= '1';
+		iA2 <= '1';
+		iB2 <= '0';
+		iA3 <= '1';
+		iB3 <= '1';
+		wait for 100 ns;
 	
       WAIT; -- will wait forever
    END PROCESS;

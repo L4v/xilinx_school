@@ -1,7 +1,7 @@
 
 # PlanAhead Launch Script for Pre-Synthesis Floorplanning, created by Project Navigator
 
-create_project -name cbps02 -dir "/home/hk-47/workspace/xilinx/_domaci/d1/cbps02/planAhead_run_1" -part xc6slx45fgg676-2
+create_project -name cbps02 -dir "/home/hk-47/workspace/xilinx/_domaci/d1/cbps02/planAhead_run_2" -part xc6slx45fgg676-2
 set_param project.pinAheadLayout yes
 set srcset [get_property srcset [current_run -impl]]
 set_property target_constrs_file "cbps02.ucf" [current_fileset -constrset]

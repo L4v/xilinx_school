@@ -59,7 +59,7 @@ begin
 		"101" when iSW(5) = '1' else
 		"110" when iSW(6) = '1' else
 		"111" when iSW(7) = '1' else
-		 "000";
+		"000";
 	
 	--oLED(4) <= '1' when (iSW(7 downto 4) > iSW(3 downto 0)) and (iSEL = '1');
 		

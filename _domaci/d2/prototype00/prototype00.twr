@@ -1,0 +1,112 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 2 -n
+3 -fastpaths -xml prototype00.twx prototype00.ncd -o prototype00.twr
+prototype00.pcf -ucf prototype00.ucf
+
+Design file:              prototype00.ncd
+Physical constraint file: prototype00.pcf
+Device,package,speed:     xc6slx45,fgg676,C,-2 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+iSEL           |oLED<0>        |   11.212|
+iSEL           |oLED<1>        |   11.494|
+iSEL           |oLED<2>        |   12.151|
+iSEL           |oLED<3>        |   11.375|
+iSEL           |oLED<4>        |   11.285|
+iSEL           |oLED<5>        |   12.362|
+iSEL           |oLED<6>        |   12.790|
+iSEL           |oLED<7>        |   12.910|
+iSW<0>         |oLED<0>        |   13.195|
+iSW<0>         |oLED<1>        |   13.477|
+iSW<0>         |oLED<2>        |   14.747|
+iSW<0>         |oLED<3>        |   13.878|
+iSW<0>         |oLED<4>        |   14.472|
+iSW<0>         |oLED<5>        |   14.180|
+iSW<0>         |oLED<6>        |   14.616|
+iSW<0>         |oLED<7>        |   15.247|
+iSW<1>         |oLED<1>        |   11.102|
+iSW<1>         |oLED<2>        |   11.644|
+iSW<1>         |oLED<3>        |   11.782|
+iSW<1>         |oLED<4>        |   11.208|
+iSW<1>         |oLED<5>        |   11.712|
+iSW<1>         |oLED<6>        |   12.060|
+iSW<1>         |oLED<7>        |   13.245|
+iSW<2>         |oLED<2>        |   12.504|
+iSW<2>         |oLED<3>        |   12.163|
+iSW<2>         |oLED<4>        |   12.665|
+iSW<2>         |oLED<5>        |   13.070|
+iSW<2>         |oLED<6>        |   13.721|
+iSW<2>         |oLED<7>        |   13.467|
+iSW<3>         |oLED<3>        |   10.252|
+iSW<3>         |oLED<4>        |   10.382|
+iSW<3>         |oLED<5>        |   11.626|
+iSW<3>         |oLED<6>        |   11.866|
+iSW<3>         |oLED<7>        |   12.600|
+iSW<4>         |oLED<0>        |   12.302|
+iSW<4>         |oLED<1>        |   12.584|
+iSW<4>         |oLED<2>        |   13.703|
+iSW<4>         |oLED<3>        |   12.775|
+iSW<4>         |oLED<4>        |   12.920|
+iSW<4>         |oLED<5>        |   13.593|
+iSW<4>         |oLED<6>        |   13.724|
+iSW<4>         |oLED<7>        |   13.887|
+iSW<5>         |oLED<1>        |   12.121|
+iSW<5>         |oLED<2>        |   12.718|
+iSW<5>         |oLED<3>        |   12.614|
+iSW<5>         |oLED<4>        |   12.716|
+iSW<5>         |oLED<5>        |   13.566|
+iSW<5>         |oLED<6>        |   13.876|
+iSW<5>         |oLED<7>        |   13.724|
+iSW<6>         |oLED<2>        |   12.122|
+iSW<6>         |oLED<3>        |   12.741|
+iSW<6>         |oLED<4>        |   12.182|
+iSW<6>         |oLED<5>        |   12.806|
+iSW<6>         |oLED<6>        |   13.757|
+iSW<6>         |oLED<7>        |   13.348|
+iSW<7>         |oLED<3>        |   13.433|
+iSW<7>         |oLED<4>        |   13.340|
+iSW<7>         |oLED<5>        |   14.652|
+iSW<7>         |oLED<6>        |   14.880|
+iSW<7>         |oLED<7>        |   14.863|
+---------------+---------------+---------+
+
+
+Analysis completed Thu Nov 15 11:41:03 2018 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 423 MB
+
+
+

@@ -1,0 +1,11 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Thu Nov 15 11:23:46 2018
+# Process ID: 1496
+# Log file: /home/hk-47/workspace/xilinx/_domaci/d2/prototype00/planAhead_run_2/planAhead.log
+# Journal file: /home/hk-47/workspace/xilinx/_domaci/d2/prototype00/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source /home/hk-47/workspace/xilinx/_domaci/d2/prototype00/pa.fromHdl.tcl
+update_compile_order -fileset sim_1

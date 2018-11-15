@@ -1,0 +1,98 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Sun Nov 11 23:33:33 2018
+# Process ID: 1187
+# Log file: /home/hk-47/workspace/xilinx/_domaci/d2/prototype00/planAhead_run_1/planAhead.log
+# Journal file: /home/hk-47/workspace/xilinx/_domaci/d2/prototype00/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source /home/hk-47/workspace/xilinx/_domaci/d2/prototype00/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin W19 [get_ports {iSW[7]}]
+endgroup
+startgroup
+set_property package_pin Y24 [get_ports {iSW[6]}]
+endgroup
+startgroup
+set_property package_pin K19 [get_ports {iSW[5]}]
+endgroup
+startgroup
+set_property package_pin V24 [get_ports {iSW[4]}]
+endgroup
+startgroup
+set_property package_pin U20 [get_ports {iSW[3]}]
+endgroup
+startgroup
+set_property package_pin U23 [get_ports {iSW[2]}]
+endgroup
+startgroup
+set_property package_pin U24 [get_ports {iSW[1]}]
+endgroup
+startgroup
+set_property package_pin U19 [get_ports {iSW[0]}]
+endgroup
+set_property package_pin "" [get_ports [list  {oLED[7]}]]
+set_property package_pin "" [get_ports [list  {iSW[0]}]]
+startgroup
+set_property package_pin U19 [get_ports {iSW[7]}]
+endgroup
+startgroup
+set_property package_pin V24 [get_ports {iSW[4]}]
+endgroup
+set_property package_pin "" [get_ports [list  {iSW[3]}]]
+startgroup
+set_property package_pin U20 [get_ports {iSW[4]}]
+endgroup
+startgroup
+set_property package_pin K19 [get_ports {iSW[5]}]
+endgroup
+set_property package_pin "" [get_ports [list  {iSW[2]}]]
+set_property package_pin "" [get_ports [list  {iSW[1]}]]
+startgroup
+set_property package_pin K19 [get_ports {iSW[5]}]
+endgroup
+startgroup
+set_property package_pin U24 [get_ports {iSW[6]}]
+endgroup
+startgroup
+set_property package_pin U23 [get_ports {iSW[5]}]
+endgroup
+startgroup
+set_property package_pin V24 [get_ports {iSW[3]}]
+endgroup
+startgroup
+set_property package_pin K19 [get_ports {iSW[2]}]
+endgroup
+startgroup
+set_property package_pin Y24 [get_ports {iSW[1]}]
+endgroup
+startgroup
+set_property package_pin W19 [get_ports {iSW[0]}]
+endgroup
+startgroup
+set_property package_pin D24 [get_ports {oLED[7]}]
+endgroup
+startgroup
+set_property package_pin H24 [get_ports {oLED[6]}]
+endgroup
+startgroup
+set_property package_pin K24 [get_ports {oLED[5]}]
+endgroup
+startgroup
+set_property package_pin L23 [get_ports {oLED[4]}]
+endgroup
+startgroup
+set_property package_pin L24 [get_ports {oLED[3]}]
+endgroup
+startgroup
+set_property package_pin M24 [get_ports {oLED[2]}]
+endgroup
+startgroup
+set_property package_pin M23 [get_ports {oLED[1]}]
+endgroup
+startgroup
+set_property package_pin N24 [get_ports {oLED[0]}]
+endgroup
+save_constraints

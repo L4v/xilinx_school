@@ -1,0 +1,24 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Thu Nov 15 11:40:23 2018
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "iSW<0>" LOCATE = SITE "W19" LEVEL 1;
+COMP "iSW<1>" LOCATE = SITE "Y24" LEVEL 1;
+COMP "iSW<2>" LOCATE = SITE "K19" LEVEL 1;
+COMP "iSW<3>" LOCATE = SITE "V24" LEVEL 1;
+COMP "iSW<4>" LOCATE = SITE "U20" LEVEL 1;
+COMP "iSW<5>" LOCATE = SITE "U23" LEVEL 1;
+COMP "iSW<6>" LOCATE = SITE "U24" LEVEL 1;
+COMP "iSW<7>" LOCATE = SITE "U19" LEVEL 1;
+COMP "oLED<0>" LOCATE = SITE "N24" LEVEL 1;
+COMP "oLED<1>" LOCATE = SITE "M23" LEVEL 1;
+COMP "oLED<2>" LOCATE = SITE "M24" LEVEL 1;
+COMP "iSEL" LOCATE = SITE "AB24" LEVEL 1;
+COMP "oLED<3>" LOCATE = SITE "L24" LEVEL 1;
+COMP "oLED<4>" LOCATE = SITE "L23" LEVEL 1;
+COMP "oLED<5>" LOCATE = SITE "K24" LEVEL 1;
+COMP "oLED<6>" LOCATE = SITE "H24" LEVEL 1;
+COMP "oLED<7>" LOCATE = SITE "D24" LEVEL 1;
+SCHEMATIC END;
+

@@ -2,9 +2,9 @@ Command line:
    prototype00_tb_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  39483
+     -socket  39267
 
-Sun Nov 11 23:28:01 2018
+Thu Nov 15 11:27:14 2018
 
 
  Elaboration Time: 0.04 sec
@@ -19,11 +19,11 @@ Sun Nov 11 23:28:01 2018
  Total Processes        : 6
  Total Traceable Variables  : 10
  Total Scalar Nets and Variables : 406
-Total Line Count : 23
+Total Line Count : 22
 
- Total Simulation Time: 0.06 sec
+ Total Simulation Time: 0.04 sec
 
  Current Memory Usage: 259.17 Meg
 
-Sun Nov 11 23:28:28 2018
+Thu Nov 15 11:32:16 2018
 

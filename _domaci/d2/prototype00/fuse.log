@@ -8,7 +8,7 @@ Parsing VHDL file "/home/hk-47/workspace/xilinx/_domaci/d2/prototype00/prototype
 Starting static elaboration
 Completed static elaboration
 Fuse Memory Usage: 84292 KB
-Fuse CPU Usage: 1890 ms
+Fuse CPU Usage: 1900 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package std_logic_arith
@@ -19,5 +19,5 @@ Time Resolution for simulation is 1ps.
 Compiled 7 VHDL Units
 Built simulation executable /home/hk-47/workspace/xilinx/_domaci/d2/prototype00/prototype00_tb_isim_beh.exe
 Fuse Memory Usage: 656612 KB
-Fuse CPU Usage: 2100 ms
-GCC CPU Usage: 800 ms
+Fuse CPU Usage: 2120 ms
+GCC CPU Usage: 5710 ms

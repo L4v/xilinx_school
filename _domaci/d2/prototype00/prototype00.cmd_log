@@ -1,0 +1,12 @@
+xst -intstyle ise -ifn "/home/hk-47/workspace/xilinx/_domaci/d2/prototype00/prototype00.xst" -ofn "/home/hk-47/workspace/xilinx/_domaci/d2/prototype00/prototype00.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc prototype00.ucf -p xc6slx45-fgg676-2 prototype00.ngc prototype00.ngd  
+map -intstyle ise -p xc6slx45-fgg676-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o prototype00_map.ncd prototype00.ngd prototype00.pcf 
+par -w -intstyle ise -ol high -mt off prototype00_map.ncd prototype00.ncd prototype00.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml prototype00.twx prototype00.ncd -o prototype00.twr prototype00.pcf -ucf prototype00.ucf 
+bitgen -intstyle ise -f prototype00.ut prototype00.ncd 
+xst -intstyle ise -ifn "/home/hk-47/workspace/xilinx/_domaci/d2/prototype00/prototype00.xst" -ofn "/home/hk-47/workspace/xilinx/_domaci/d2/prototype00/prototype00.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc prototype00.ucf -p xc6slx45-fgg676-2 prototype00.ngc prototype00.ngd  
+map -intstyle ise -p xc6slx45-fgg676-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o prototype00_map.ncd prototype00.ngd prototype00.pcf 
+par -w -intstyle ise -ol high -mt off prototype00_map.ncd prototype00.ncd prototype00.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml prototype00.twx prototype00.ncd -o prototype00.twr prototype00.pcf -ucf prototype00.ucf 
+bitgen -intstyle ise -f prototype00.ut prototype00.ncd 

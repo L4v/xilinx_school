@@ -1,0 +1,142 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Sun Nov 11 23:33:33 2018
+# Process ID: 1187
+# Log file: /home/hk-47/workspace/xilinx/_domaci/d2/prototype00/planAhead_run_1/planAhead.log
+# Journal file: /home/hk-47/workspace/xilinx/_domaci/d2/prototype00/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source /home/hk-47/workspace/xilinx/_domaci/d2/prototype00/pa.fromHdl.tcl
+# create_project -name prototype00 -dir "/home/hk-47/workspace/xilinx/_domaci/d2/prototype00/planAhead_run_1" -part xc6slx45fgg676-2
+# set_param project.pinAheadLayout yes
+# set srcset [get_property srcset [current_run -impl]]
+# set_property target_constrs_file "prototype00.ucf" [current_fileset -constrset]
+Adding file '/home/hk-47/workspace/xilinx/_domaci/d2/prototype00/prototype00.ucf' to fileset 'constrs_1'
+# set hdlfile [add_files [list {prototype00.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set_property top prototype00 $srcset
+# add_files [list {prototype00.ucf}] -fileset [get_property constrset [current_run]]
+# open_rtl_design -part xc6slx45fgg676-2
+Using Verific elaboration
+Parsing VHDL file "/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Parsing VHDL file "/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Parsing VHDL file "/home/hk-47/workspace/xilinx/_domaci/d2/prototype00/prototype00.vhd" into library work
+Loading clock regions from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan6/spartan6lx/xc6slx45/ClockRegion.xml
+Loading clock buffers from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan6/spartan6lx/xc6slx45/ClockBuffers.xml
+Loading package pin functions from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan6/PinFunctions.xml...
+Loading package from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan6/spartan6lx/xc6slx45/fgg676/Package.xml
+Loading io standards from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan6/IOStandards.xml
+Loading device configuration modes from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan6/ConfigModes.xml
+Loading list of drcs for the architecture : /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan6/drc.xml
+Parsing UCF File [/home/hk-47/workspace/xilinx/_domaci/d2/prototype00/prototype00.ucf]
+Finished Parsing UCF File [/home/hk-47/workspace/xilinx/_domaci/d2/prototype00/prototype00.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: 057c33d8
+open_rtl_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:25 . Memory (MB): peak = 2861.562 ; gain = 167.926
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin W19 [get_ports {iSW[7]}]
+endgroup
+startgroup
+set_property package_pin Y24 [get_ports {iSW[6]}]
+endgroup
+startgroup
+set_property package_pin K19 [get_ports {iSW[5]}]
+endgroup
+startgroup
+set_property package_pin V24 [get_ports {iSW[4]}]
+endgroup
+startgroup
+set_property package_pin U20 [get_ports {iSW[3]}]
+endgroup
+startgroup
+set_property package_pin U23 [get_ports {iSW[2]}]
+endgroup
+startgroup
+set_property package_pin U24 [get_ports {iSW[1]}]
+endgroup
+startgroup
+set_property package_pin U19 [get_ports {iSW[0]}]
+endgroup
+set_property package_pin "" [get_ports [list  {oLED[7]}]]
+set_property package_pin "" [get_ports [list  {iSW[0]}]]
+startgroup
+set_property package_pin U19 [get_ports {iSW[7]}]
+endgroup
+startgroup
+set_property package_pin V24 [get_ports {iSW[4]}]
+endgroup
+set_property package_pin "" [get_ports [list  {iSW[3]}]]
+startgroup
+set_property package_pin U20 [get_ports {iSW[4]}]
+endgroup
+startgroup
+set_property package_pin K19 [get_ports {iSW[5]}]
+endgroup
+set_property package_pin "" [get_ports [list  {iSW[2]}]]
+set_property package_pin "" [get_ports [list  {iSW[1]}]]
+startgroup
+set_property package_pin K19 [get_ports {iSW[5]}]
+endgroup
+startgroup
+set_property package_pin U24 [get_ports {iSW[6]}]
+endgroup
+startgroup
+set_property package_pin U23 [get_ports {iSW[5]}]
+endgroup
+startgroup
+set_property package_pin V24 [get_ports {iSW[3]}]
+endgroup
+startgroup
+set_property package_pin K19 [get_ports {iSW[2]}]
+endgroup
+startgroup
+set_property package_pin Y24 [get_ports {iSW[1]}]
+endgroup
+startgroup
+set_property package_pin W19 [get_ports {iSW[0]}]
+endgroup
+startgroup
+set_property package_pin D24 [get_ports {oLED[7]}]
+endgroup
+startgroup
+set_property package_pin H24 [get_ports {oLED[6]}]
+endgroup
+startgroup
+set_property package_pin K24 [get_ports {oLED[5]}]
+endgroup
+startgroup
+set_property package_pin L23 [get_ports {oLED[4]}]
+endgroup
+startgroup
+set_property package_pin L24 [get_ports {oLED[3]}]
+endgroup
+startgroup
+set_property package_pin M24 [get_ports {oLED[2]}]
+endgroup
+startgroup
+set_property package_pin M23 [get_ports {oLED[1]}]
+endgroup
+startgroup
+set_property package_pin N24 [get_ports {oLED[0]}]
+endgroup
+save_constraints
+exit
+ERROR: [#UNDEF] *** Exception: ui.h.b: Found deleted key in HTclEventBroker. Verify if the classes listed here call cleanup()
+HTclEvent: SIGNAL_MODIFY   Classes: ui.views.aR 
+HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_BUS_MODIFY   Classes: ui.views.aR 
+HTclEvent: DEBUG_PORT_CONFIG_CHANGE   Classes: ui.views.aR 
+ (See /home/hk-47/workspace/xilinx/_domaci/d2/prototype00/planAhead_pid1187.debug)
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Sun Nov 11 23:41:43 2018...
+INFO: [Common 17-83] Releasing license: PlanAhead

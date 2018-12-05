@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "/home/hk-47/workspace/xilinx/v04/pomeracki_registar/pomweracki_registar_tb_isim_beh.exe" -prj "/home/hk-47/workspace/xilinx/v04/pomeracki_registar/pomweracki_registar_tb_beh.prj" "work.pomweracki_registar_tb" 

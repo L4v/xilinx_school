@@ -1,0 +1,2 @@
+vhdl isim_temp "pomeracki_registar.vhd"
+vhdl isim_temp "pomweracki_registar_tb.vhd"

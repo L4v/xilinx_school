@@ -97,10 +97,30 @@ BEGIN
    begin		
 		iDATA <= "10100011";
 		inRST <= '1';
+		iSHR <= '0';
+		iSHR <= '0';
+		iARITH <= '0';
 		
 		iLOAD <= '1';
+      wait for iCLK_period*5.25;
+		iLOAD <= '0';
+      wait for iCLK_period*5.25;
+		iSHR <='1';
+      wait for iCLK_period*5.25;
+		iSHL <='1';
+      wait for iCLK_period*5.25;
+		iSHR <='0';
+      wait for iCLK_period*5.25;
 		
-		
+		iARITH <= '1';
+		iSHR <= '0';
+		iSHL <= '0';
+      wait for iCLK_period*5.25;
+		iSHR <='1';
+      wait for iCLK_period*5.25;
+		iSHL <= '1';
+      wait for iCLK_period*5.25;
+		iSHR <='0';
       wait for iCLK_period*5.25;
 
       -- insert stimulus here 

@@ -41,12 +41,12 @@ entity pomeracki_registar is
 end pomeracki_registar;
 
 architecture Behavioral of pomeracki_registar is
-	signal sSHL : STD_LOGIC_VECTOR(7 downto 0);
-	signal sSHR : STD_LOGIC_VECTOR(7 downto 0);
-	signal sSH : STD_LOGIC_VECTOR(7 downto 0);
-	signal sSHREG : STD_LOGIC_VECTOR(7 downto 0);
+
+	signal sREG : STD_LOGIC_VECTOR (7 downto 0);
 	signal sSHSEL : STD_LOGIC_VECTOR (1 downto 0);
-	signal sREG : STD_LOGIC_VECTOR(7 downto 0);
+	signal sSHL : STD_LOGIC_VECTOR ( 7 downto 0);
+	signal sSHR : STD_LOGIC_VECTOR (7 downto 0);
+	signal sSHFT : STD_LOGIC_VECTOR (7 downto 0);
 	
 begin
 
@@ -56,30 +56,28 @@ begin
 		if(inRST = '0')then
 			sREG <= x"00";
 		elsif(rising_edge(iCLK))then
-			sREG <= sSHREG;
+			if(iLOAD = '1') then
+				sREG <= iDATA;
+			else
+				--
+				sREG <= sSHFT;
+				--
+			end if;
 		end if;
 	end process;
 	
-	-- MUX 3
-	with iLOAD select sSHREG <=
-		iDATA when '1',
-		sSH when others;
-	
-	-- MUX 2
-	with iSHSEL select sSH <=
+	with iARITH select sSHR <=
+		iDATA(7) & '0' & iDATA(5 downto 1) when '1',
+		'0' & iDATA(7 downto 1) when others;
+		
+	with iARITH select sSHL <=
+		iDATA(7) & iDATA(5 downto 0) when '0',
+		iDATA(7 downto 1) & '0' when others;
+		
+	with sSHSEL select sSHFT <=
 		sSHL when "10",
 		sSHR when "01",
-		sSH when others;
-		
-	-- MUX 1
-	with iARTH select sSHR <=
-		iDATA(6 downto 0) & '0' when '0',
-		iDATA(7) & iDATA(5 downto 0) & '0' when others;
-		
-	-- MUX 0
-	with iARTH select sSHR <=
-		'0' & iDATA(7 downto 1) when '0',
-		iDATA(7) & '0' & iDATA(5 downto 1) when others;
+		sSHFT when others;
 		
 	oSHREG <= sREG;
 	sSHSEL <= iSHL & iSHR;

@@ -59,7 +59,7 @@ begin
 	
 	-- Inkrementacija
 	process(sCNT) begin
-		if(sCNT = 24000000 - 1)then
+		if(sCNT = 24 - 1)then
 			sCNTNEXT <= "0000000000000000000000000";
 			sTCNEXT <= '1';
 		else

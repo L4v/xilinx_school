@@ -2,28 +2,29 @@ Command line:
    prototype00_tb_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  36467
+     -socket  50533
 
-Wed Dec  5 18:33:33 2018
+Thu Dec  6 18:31:02 2018
 
 
- Elaboration Time: 0.09 sec
+ Elaboration Time: 0.06 sec
 
- Current Memory Usage: 183.669 Meg
+ Current Memory Usage: 183.673 Meg
 
- Total Signals          : 13
- Total Nets             : 71
- Total Signal Drivers   : 9
+ Total Signals          : 16
+ Total Nets             : 73
+ Total Signal Drivers   : 11
  Total Blocks           : 5
  Total Primitive Blocks : 4
  Total Processes        : 7
  Total Traceable Variables  : 11
- Total Scalar Nets and Variables : 450
-Total Line Count : 25
+ Total Scalar Nets and Variables : 452
+Total Line Count : 92
+Total Line Count : 92
 
- Total Simulation Time: 0.11 sec
+ Total Simulation Time: 0.13 sec
 
- Current Memory Usage: 259.17 Meg
+ Current Memory Usage: 259.174 Meg
 
-Wed Dec  5 18:33:56 2018
+Thu Dec  6 18:32:54 2018
 

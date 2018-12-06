@@ -43,8 +43,9 @@ ARCHITECTURE behavior OF prototype00_tb IS
     PORT(
          iCLK : IN  std_logic;
          inRST : IN  std_logic;
-         oTC : OUT  std_logic;
-			oRES : OUT std_logic_vector(7 downto 0)
+			inGO : IN std_logic;
+			inSTOP : IN std_logic;
+			oSEC : OUT std_logic_vector(7 downto 0)
         );
     END COMPONENT;
     
@@ -52,13 +53,14 @@ ARCHITECTURE behavior OF prototype00_tb IS
    --Inputs
    signal iCLK : std_logic := '0';
    signal inRST : std_logic := '0';
+	signal inGO : std_logic := '0';
+	signal inSTOP : std_logic := '0';
 
  	--Outputs
-   signal oTC : std_logic;
-	signal oRES : std_logic_vector(7 downto 0);
+	signal oSEC : std_logic_vector(7 downto 0);
 
    -- Clock period definitions
-   constant iCLK_period : time := 10 ns; -- 10
+   constant iCLK_period : time := 42.666667 ns; -- 42.666667 40 muS (10 ns default)
  
 BEGIN
  
@@ -66,8 +68,9 @@ BEGIN
    uut: prototype00 PORT MAP (
           iCLK => iCLK,
           inRST => inRST,
-          oTC => oTC,
-			 oRES => oRES
+			 inGO => inGO,
+			 inSTOP => inSTOP,
+			 oSEC => oSEC
         );
 
    -- Clock process definitions
@@ -84,10 +87,97 @@ BEGIN
    stim_proc: process
    begin		
 		inRST <= '1';
-      wait for 900 ns;	
-		inRST <= '0';	
-
-      -- insert stimulus here 
+	
+		inGO <= '1';
+		inSTOP <= '1';
+      wait for 1 us;
+		
+		inGO <= '1';
+		inSTOP <= '0';
+      wait for 1 us;
+		
+		inGO <= '0';
+		inSTOP <= '0';
+      wait for 1 us;
+		
+		inGO <= '0';
+		inSTOP <= '1';
+      wait for 1 us;
+		
+		inGO <= '1';
+		inSTOP <= '1';
+      wait for 1 us;
+		
+		inGO <= '1';
+		inSTOP <= '0';
+      wait for 1 us;
+		
+		inGO <= '0';
+		inSTOP <= '1';
+      wait for 3 us;
+		
+		--
+		inRST <= '0';
+		--
+		
+		inGO <= '1';
+		inSTOP <= '1';
+      wait for 1 us;
+		
+		inGO <= '1';
+		inSTOP <= '0';
+      wait for 1 us;
+		
+		inGO <= '0';
+		inSTOP <= '0';
+      wait for 1 us;
+		
+		inGO <= '0';
+		inSTOP <= '1';
+      wait for 1 us;
+		
+		inGO <= '1';
+		inSTOP <= '1';
+      wait for 1 us;
+		
+		inGO <= '1';
+		inSTOP <= '0';
+      wait for 1 us;
+		
+		inGO <= '0';
+		inSTOP <= '1';
+		wait for 3 us;
+		
+		--
+		inRST <= '1';
+		--
+	
+		inGO <= '1';
+		inSTOP <= '1';
+      wait for 1 us;
+		
+		inGO <= '1';
+		inSTOP <= '0';
+      wait for 1 us;
+		
+		inGO <= '0';
+		inSTOP <= '0';
+      wait for 1 us;
+		
+		inGO <= '0';
+		inSTOP <= '1';
+      wait for 1 us;
+		
+		inGO <= '1';
+		inSTOP <= '1';
+      wait for 1 us;
+		
+		inGO <= '1';
+		inSTOP <= '0';
+      wait for 1 us;
+		
+		inGO <= '0';
+		inSTOP <= '1';
 
       wait;
    end process;

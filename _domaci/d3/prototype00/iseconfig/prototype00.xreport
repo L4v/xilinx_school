@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2018-12-05T18:33:15</DateModified>
+  <DateModified>2018-12-06T18:11:40</DateModified>
   <ModuleName>prototype00</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
+  <SummaryTimeStamp>2018-12-06T18:03:26</SummaryTimeStamp>
   <SavedFilePath>/home/hk-47/workspace/xilinx/_domaci/d3/prototype00/iseconfig/prototype00.xreport</SavedFilePath>
   <ImplementationReportsDirectory>/home/hk-47/workspace/xilinx/_domaci/d3/prototype00/</ImplementationReportsDirectory>
   <DateInitialized>2018-12-05T12:34:25</DateInitialized>

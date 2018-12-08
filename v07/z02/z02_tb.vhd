@@ -92,7 +92,7 @@ BEGIN
 		
 		iRST <= '0';
 		iLOAD <= '1';
-		iA <= "0101";
+		iA <= "1101"; -- 13, izaziva overflow u shiftovanju, sto je dobro
 		wait for iCLK_period;
 		iLOAD <= '0';
 		

@@ -94,9 +94,6 @@ begin
 		else 
 			sSHL0 <= x"00000000";
 		end if;
-		
-		sPROD <= sSHL3 + sSHL2 + sSHL1 + sSHL0;
-		
 	end process;
 	
 	-- REG
@@ -107,6 +104,10 @@ begin
 			sFACT <= sPROD;
 		end if;
 	end process;
+	
+	-- sPROD
+	sPROD <= sSHL3 + sSHL2 + sSHL1 + sSHL0;
+		
 	
 	-- sRST
 	sRST <= iLOAD or iRST;

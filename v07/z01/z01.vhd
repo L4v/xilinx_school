@@ -86,7 +86,9 @@ begin
 		if(inRST  = '0') then
 			sPAR <= '0';
 		elsif (rising_edge(iCLK)) then
-			sPAR <= not(sDATA(8));
+			if(sTC = '1') then
+				sPAR <= sDATA(8) xor sDATA(7) xor sDATA(6) xor sDATA(5) xor sDATA(4) xor sDATA(3) xor sDATA(2) xor sDATA(1) xor sDATA(0);
+			end if;
 		end if;
 	end process;
 	
@@ -103,7 +105,7 @@ begin
 		end if;
 	end process;
 	
-	oPARITY_OK <= sPAR;
+	oPARITY_OK <= not(sPAR);
 	oDATA <= sREG;
 
 end Behavioral;

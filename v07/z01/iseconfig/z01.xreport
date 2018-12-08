@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2018-12-06T19:25:51</DateModified>
+  <DateModified>2018-12-08T00:52:31</DateModified>
   <ModuleName>z01</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>/home/hk-47/workspace/xilinx/v07/z01/iseconfig/z01.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/hk-47/workspace/xilinx/v07/z01</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>/home/hk-47/workspace/xilinx/v07/z01/</ImplementationReportsDirectory>
   <DateInitialized>2018-12-06T18:37:10</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

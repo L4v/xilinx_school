@@ -69,40 +69,34 @@ begin
 		end if;
 	end process;
 
-	-- SHL 3
-	process(sCNT(3)) begin
+	
+	process(sCNT) begin
 		if(sCNT(3) = '1')then
 			sSHL3 <= sFACT(28 downto 0) & "000";
 		else
 			sSHL3 <= x"00000000";
 		end if;
-	end process;
-
-	-- SHL 2
-	process(sCNT(2)) begin
+		
 		if(sCNT(2) = '1')then
 			sSHL2 <= sFACT(29 downto 0) & "00";
 		else
 			sSHL2 <= x"00000000";
 		end if;
-	end process;
-
-	-- SHL 1
-	process(sCNT(1)) begin
+		
 		if(sCNT(1) = '1')then
 			sSHL1 <= sFACT(30 downto 0) & '0';
 		else
 			sSHL1 <= x"00000000";
 		end if;
-	end process;
-
-	-- SHL 0
-	process(sCNT(0))begin
+		
 		if(SCNT(0) = '1') then
 			sSHL0 <= sFACT(31 downto 0);
 		else 
 			sSHL0 <= x"00000000";
 		end if;
+		
+		sPROD <= sSHL3 + sSHL2 + sSHL1 + sSHL0;
+		
 	end process;
 	
 	-- REG
@@ -113,10 +107,6 @@ begin
 			sFACT <= sPROD;
 		end if;
 	end process;
-	
-	
-	-- SABIRAC
-	sPROD <= sSHL3 + sSHL2 + sSHL1 + sSHL0;
 	
 	-- sRST
 	sRST <= iLOAD or iRST;

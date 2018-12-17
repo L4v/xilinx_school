@@ -1,0 +1,11 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib secureip -o /home/hk-47/workspace/xilinx/v09/z01/z01_tb_isim_beh.exe -prj /home/hk-47/workspace/xilinx/v09/z01/z01_tb_beh.prj work.z01_tb 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "/home/hk-47/workspace/xilinx/v09/z01/z02.vhd" into library work
+Parsing VHDL file "/home/hk-47/workspace/xilinx/v09/z01/z01.vhd" into library work
+ERROR:HDLCompiler:1728 - "/home/hk-47/workspace/xilinx/v09/z01/z01.vhd" Line 61: Type error near sled ; current type std_logic_vector; expected type std_logic
+ERROR:HDLCompiler:1728 - "/home/hk-47/workspace/xilinx/v09/z01/z01.vhd" Line 64: Type error near sprig ; current type std_logic_vector; expected type std_logic
+ERROR:HDLCompiler:854 - "/home/hk-47/workspace/xilinx/v09/z01/z01.vhd" Line 43: Unit <behavioral> ignored due to previous errors.
+VHDL file /home/hk-47/workspace/xilinx/v09/z01/z01.vhd ignored due to errors

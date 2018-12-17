@@ -76,13 +76,13 @@
          <ClosedNode>/z01_tb - behavior |home|hk-47|workspace|xilinx|_practice|01|sekv2010|z01|z01_tb.vhd</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>z01_tb - behavior (/home/hk-47/workspace/xilinx/_practice/01/sekv2010/z01/z01_tb.vhd)</SelectedItem>
+         <SelectedItem>z02 - Behavioral (/home/hk-47/workspace/xilinx/_practice/01/sekv2010/z01/z02.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000010a000000020000000000000000000000000200000064ffffffff0000008100000003000000020000010a0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>z01_tb - behavior (/home/hk-47/workspace/xilinx/_practice/01/sekv2010/z01/z01_tb.vhd)</CurrentItem>
+      <CurrentItem>z02 - Behavioral (/home/hk-47/workspace/xilinx/_practice/01/sekv2010/z01/z02.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -112,5 +112,5 @@
       <CurrentItem></CurrentItem>
    </ItemView>
    <SourceProcessView>000000ff0000000000000002000001510000012001000000060100000002</SourceProcessView>
-   <CurrentView>Behavioral Simulation</CurrentView>
+   <CurrentView>Implementation</CurrentView>
 </Project>

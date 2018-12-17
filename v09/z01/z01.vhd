@@ -44,11 +44,25 @@ architecture Behavioral of z01 is
 
 	type tSTANJE is (IDLE, ROTATE_LEFT, ROTATE_RIGHT, BLINK);
 	signal sSTANJE, sNEXT : tSTANJE;
-	signal sLED : STD_LOGIC_VECTOR(7 downto 0);
+	signal sLED,sPRIG : STD_LOGIC_VECTOR(7 downto 0);
 	signal sCNT, sCNTN : STD_LOGIC_VECTOR(24 downto 0);
 	signal sTC, sTCN : STD_LOGIC;
+	
+	component z02 is
+		port( X : in std_logic_vector(7 downto 0);
+				C : in std_logic;
+				R : in std_logic;
+				P : out std_logic_vector(7 downto 0));
+	end component;
 
 begin
+
+	iPRIG : z02 port map(
+		X => sLED,
+		C => iCLK,
+		R => inRST,
+		P => sPRIG
+	);
 
 	-- COUNTER
 	process(sCNT) begin
@@ -134,7 +148,11 @@ begin
 		end if;
 	end process;
 
-	oLED <= sLED;
+	
+
+	oLED <= sPRIG;
+	
+	
 
 end Behavioral;
 

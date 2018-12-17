@@ -41,13 +41,13 @@ end z02;
 
 architecture Behavioral of z02 is
 	
-	signal sCNT : STD_LOGIC_VECTOR( 3 downto 0);
 	signal sSHL3 : STD_LOGIC_VECTOR(31 downto 0);
 	signal sSHL2 : STD_LOGIC_VECTOR(31 downto 0);
 	signal sSHL1 : STD_LOGIC_VECTOR(31 downto 0);
 	signal sSHL0 : STD_LOGIC_VECTOR(31 downto 0);
 	signal sFACT : STD_LOGIC_VECTOR(31 downto 0);
 	signal sPROD : STD_LOGIC_VECTOR(31 downto 0);
+	signal sCNT : STD_LOGIC_VECTOR(3 downto 0);
 	signal sRST : STD_LOGIC;
 
 begin
@@ -68,7 +68,6 @@ begin
 			end if;
 		end if;
 	end process;
-
 	
 	process(sCNT) begin
 		if(sCNT(3) = '1')then
@@ -95,7 +94,7 @@ begin
 			sSHL0 <= x"00000000";
 		end if;
 	end process;
-	
+
 	-- REG
 	process (iCLK, sRST) begin
 		if(sRST = '1') then
@@ -104,10 +103,9 @@ begin
 			sFACT <= sPROD;
 		end if;
 	end process;
-	
+
 	-- sPROD
 	sPROD <= sSHL3 + sSHL2 + sSHL1 + sSHL0;
-		
 	
 	-- sRST
 	sRST <= iLOAD or iRST;

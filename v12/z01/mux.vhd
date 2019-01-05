@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    12:40:19 01/04/2019 
+-- Create Date:    11:27:53 01/05/2019 
 -- Design Name: 
 -- Module Name:    mux - Behavioral 
 -- Project Name: 
@@ -57,7 +57,7 @@ begin
 		iD6 when x"6",
 		iD7 when x"7",
 		iD8 when others;
-		
+
 	oQ <= sMUX;
 
 end Behavioral;

@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    13:12:27 01/04/2019 
+-- Create Date:    11:57:42 01/05/2019 
 -- Design Name: 
 -- Module Name:    cpu_top - Behavioral 
 -- Project Name: 
@@ -36,124 +36,53 @@ entity cpu_top is
            oDATA : out  STD_LOGIC_VECTOR (15 downto 0));
 end cpu_top;
 
-architecture Behavioral of cpu_top is	
+architecture Behavioral of cpu_top is
+
+	type NIZ is array (0 to 7) of std_logic_vector(15 downto 0);
 	
-	type NIZ is array (0 to 7) of STD_LOGIC_VECTOR(15 downto 0);
 	signal sR : NIZ;
-	signal sREG_WE : STD_LOGIC_VECTOR(7 downto 0);
-	signal sMUXA_SEL, sMUXB_SEL, sALU_SEL : STD_LOGIC_VECTOR(3 downto 0);
-	signal sZERO, sCARRY, sSIGN : STD_LOGIC;
-	signal sRESULT, sMUXA, sMUXB : STD_LOGIC_VECTOR(15 downto 0);
+	signal sRESULT, sMUXA, sMUXB : std_logic_vector(15 downto 0);
+	signal sREG_WE : std_logic_vector(7 downto 0);
+	signal sMUXA_SEL, sMUXB_SEL, sALU_SEL : std_logic_vector(3 downto 0);
+	signal sZERO, sSIGN, sCARRY : std_logic;
+	
+	component reg
+		port(iCLK, inRST, iWE : in std_logic;
+			  iD 			 	 	 : in std_logic_vector(15 downto 0);
+			  oQ				 	 : out std_logic_vector(15 downto 0));
+	end component;
 	
 	component mux
-		port(id0 : in std_logic_vector(15 downto 0);
-			  id1 : in std_logic_vector(15 downto 0);
-			  id2 : in std_logic_vector(15 downto 0);
-			  id3 : in std_logic_vector(15 downto 0);
-			  id4 : in std_logic_vector(15 downto 0);
-			  id5 : in std_logic_vector(15 downto 0);
-			  id6 : in std_logic_vector(15 downto 0);
-			  id7 : in std_logic_vector(15 downto 0);
-			  id8 : in std_logic_vector(15 downto 0);
-			  isel : in std_logic_vector(3 downto 0);
-			  oq : out std_logic_vector(15 downto 0));
+		port(iD0, iD1, iD2, iD3, iD4, iD5, iD6, iD7, iD8 : in std_logic_vector(15 downto 0);
+			  iSEL											 : in std_logic_vector(3 downto 0);
+			  oQ											 	 : out std_logic_vector(15 downto 0));
 	end component;
 	
 	component alu
-		port(a : in std_logic_vector(15 downto 0);
-			  b : in std_logic_vector(15 downto 0);
-			  sel : in std_logic_vector(3 downto 0);
-			  c : out std_logic_vector(15 downto 0);
-			  carry : out std_logic;
-			  sign : out std_logic;
-			  zero : out std_logic);
+		port(iA, iB  				  : in std_logic_vector(15 downto 0);
+			  iSEL 				  	  : in std_logic_vector(3 downto 0);
+			  oC    				  	  : out std_logic_vector(15 downto 0);
+			  oZERO, oSIGN, oCARRY : out std_Logic);
 	end component;
-	
-	component control_unit
-		port(clk : in std_logic;
-			  nrst : in std_logic;
-			  zero : in std_logic;
-			  sign : in std_logic;
-			  carry : in std_logic;
-			  reg_we : out std_logic_vector(7 downto 0);
-			  muxa : out std_logic_vector(3 downto 0);
-			  muxb : out std_logic_vector(3 downto 0);
-			  alu : out std_logic_vector(3 downto 0));
-	end component;
-	
-	component reg
-		port(iclk: in std_logic;
-			  inrst : in std_logic;
-			  iwe : in std_logic;
-			  id : in std_logic_vector(15 downto 0);
-			  oq : out std_logic_vector(15 downto 0));
-	end component;
-	
+
 begin
-	
-	-- REGISTRI
-	
-	REGISTRI_GEN:
+
+	-- REGISTRI R0 - R7
+	REGISTRI: -- labela
 		for i in 0 to 7 generate
-				REG_I : reg port map(iCLK, inRST, sREG_WE(i), sRESULT, sR(i));
-		end generate REGISTRI_GEN;
+			REG_I : reg port map(iCLK, inRST, sREG_WE(i), sRESULT, sR(i));
+		end generate REGISTRI; -- kraj labele
 
-	-- MUXA
-	MUXA : mux port map(
-		id0 => sR(0),
-		id1 => sR(1),
-		id2 => sR(2),
-		id3 => sR(3),
-		id4 => sR(4),
-		id5 => sR(5),
-		id6 => sR(6),
-		id7 => sR(7),
-		id8 => iDATA,
-		isel => sMUXA_SEL,
-		oq => sMUXA
-	);
+	-- MULTIPLEXERI:
+	-- MULTIPLEXER A
+	MUXA : mux port map(sR(0), sR(1), sR(2), sR(3), sR(4), sR(5), sR(6), sR(7), iDATA,
+								sMUXA_SEL, sMUXA);
+	-- MULTIPLEXER B					
+	MUXB : mux port map(sR(0), sR(1), sR(2), sR(3), sR(4), sR(5), sR(6), sR(7), iDATA,
+								sMUXB_SEL, sMUXB);
 	
-	-- MUXB
-	MUXB : mux port map(
-		id0 => sR(0),
-		id1 => sR(1),
-		id2 => sR(2),
-		id3 => sR(3),
-		id4 => sR(4),
-		id5 => sR(5),
-		id6 => sR(6),
-		id7 => sR(7),
-		id8 => iDATA,
-		isel => sMUXB_SEL,
-		oq => sMUXB
-	);
-	
-	-- ALU
-	ALU_i : alu port map(
-		a => sMUXA,
-		b => sMUXB,
-		sel => sALU_SEL,
-		c => sRESULT,
-		carry => sCARRY,
-		sign => sSIGN,
-		zero => sZERO
-	);
-
-	-- DATA
-	oDATA <= sRESULT;
-	
-	-- CONTROL UNIT
-	C_UNIT : control_unit port map(
-		clk => iCLK,
-		nrst => inRST,
-		zero => sZERO,
-		sign => sSIGN,
-		carry => sCARRY,
-		reg_we => sREG_WE,
-		muxa => sMUXA_SEL,
-		muxb => sMUXB_SEL,
-		alu => sALU_SEL
-	);
+	-- ARITMETICKO LOGICKA JEDINICA
+	ALU_I : alu port map(sMUXA, sMUXB, sALU_SEL, sRESULT, sZERO, sSIGN, sCARRY);
 
 end Behavioral;
 

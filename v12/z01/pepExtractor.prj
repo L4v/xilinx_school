@@ -1,4 +1,1 @@
-work	"alu.vhd"
 work	"cpu_top.vhd"
-work	"mux.vhd"
-work	"reg.vhd"

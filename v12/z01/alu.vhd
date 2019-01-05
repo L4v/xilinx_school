@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    12:46:11 01/04/2019 
+-- Create Date:    11:39:08 01/05/2019 
 -- Design Name: 
 -- Module Name:    alu - Behavioral 
 -- Project Name: 
@@ -42,30 +42,29 @@ end alu;
 
 architecture Behavioral of alu is
 
-	signal sADD : STD_LOGIC_VECTOR(16 downto 0);
-	signal sALU : STD_LOGIC_VECTOR(16 downto 0);
-	
+	signal sAUX : STD_LOGIC_VECTOR(16 downto 0);
+
 begin
 
-	with iSEL select sALU <=
-		'0' & iA when x"0",
-		'0' & iA + '0' & iB when x"1",
-		'0' & iA - '0' & iB when x"2",
-		('0' & iA) and ('0' & iB) when x"3",
-		('0' & iA) or ('0' & iB) when x"4",
-		'0' & not(iA) when x"5",
-		'0' & iA + 1 when x"6",
-		'0' & iA - 1 when x"7",
-		iA(15 downto 0) & '0' when x"8",
-		"00" & iA(15 downto 1) when x"9",
-		'1' & (not(iA) + 1) when x"A",
-		iA(15) & iA(15) & iA(14 downto 0) when x"B",
-		'0'& x"0000" when others;
-
-	oZERO <= '1' when sALU(15 downto 0) = x"0000" else '0';
-	oCARRY <= sALU(16);
-	oSIGN <= sALU(15);
-	oC <= sALU(15 downto 0);
+	with iSEL select sAUX <=
+		'0' & iA 								when x"0",
+		('0' & iA) + ('0' & iB) 			when x"1",
+		('0' & iA) + ('0' & iB) 			when x"2", -- drugi komplement
+		('0' & iA) and ('0' & iB) 			when x"3",
+		('0' & iA) or ('0' & iB) 			when x"4",
+		not('0' & iA) 							when x"5",
+		('0' & iA) + 1 						when x"6",
+		('0' & iA) + x"FFFF" 				when x"7", -- x"FFFF" je -1
+		iA(15 downto 1) & '0' 				when x"8",
+		iA(0) & '0' & iA(15 downto 1) 	when x"9",
+		not('0' & iA) + 1 					when x"A",
+		iA(0) & iA(15) & iA(15 downto 1) when x"B",
+		x"FFFF" 									when others;-- vraca default
+	
+	oCARRY <= sAUX(16);
+	oSIGN <= sAUX(15);
+	oZERO <= '1' when sAUX(15 downto 0) = x"0000" else '0';
+	oC <= sAUX(15 downto 0);
 
 end Behavioral;
 

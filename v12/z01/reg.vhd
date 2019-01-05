@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    12:31:14 01/04/2019 
+-- Create Date:    11:23:57 01/05/2019 
 -- Design Name: 
 -- Module Name:    reg - Behavioral 
 -- Project Name: 
@@ -40,10 +40,9 @@ end reg;
 architecture Behavioral of reg is
 	
 	signal sREG : STD_LOGIC_VECTOR(15 downto 0);
-
+	
 begin
 
-	-- REGISTAR
 	process(iCLK, inRST, iWE) begin
 		if(inRST = '0') then
 			sREG <= x"0000";

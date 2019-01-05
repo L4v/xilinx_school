@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer:
 --
--- Create Date:   23:54:27 01/04/2019
+-- Create Date:   12:02:34 01/05/2019
 -- Design Name:   
 -- Module Name:   /home/hk-47/workspace/xilinx/v12/z01/z01_tb.vhd
 -- Project Name:  z01
@@ -83,7 +83,9 @@ BEGIN
    -- Stimulus process
    stim_proc: process
    begin		
-		inRST <= '1';
+      -- hold reset state for 100 ns.
+      wait for 100 ns;	
+
       wait for iCLK_period*10;
 
       -- insert stimulus here 

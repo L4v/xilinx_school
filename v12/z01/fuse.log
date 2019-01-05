@@ -1,0 +1,13 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib secureip -o /home/hk-47/workspace/xilinx/v12/z01/z01_tb_isim_beh.exe -prj /home/hk-47/workspace/xilinx/v12/z01/z01_tb_beh.prj work.z01_tb 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "/home/hk-47/workspace/xilinx/v12/z01/reg.vhd" into library work
+Parsing VHDL file "/home/hk-47/workspace/xilinx/v12/z01/mux.vhd" into library work
+Parsing VHDL file "/home/hk-47/workspace/xilinx/v12/z01/alu.vhd" into library work
+Parsing VHDL file "/home/hk-47/workspace/xilinx/v12/z01/cpu_top.vhd" into library work
+Parsing VHDL file "/home/hk-47/workspace/xilinx/v12/z01/z01_tb.vhd" into library work
+Starting static elaboration
+ERROR:HDLCompiler:410 - "/home/hk-47/workspace/xilinx/v12/z01/alu.vhd" Line 50: Expression has 16 elements ; expected 17
+ERROR:Simulator:777 - Static elaboration of top level VHDL design unit z01_tb in library work failed

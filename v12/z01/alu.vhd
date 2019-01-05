@@ -47,19 +47,19 @@ architecture Behavioral of alu is
 begin
 
 	with iSEL select sAUX <=
-		'0' & iA 								when x"0",
+		('0' & iA) 								when x"0",
 		('0' & iA) + ('0' & iB) 			when x"1",
-		('0' & iA) + ('0' & iB) 			when x"2", -- drugi komplement
+		('0' & iA) + (not('0' & iB) + 1) when x"2", -- drugi komplement
 		('0' & iA) and ('0' & iB) 			when x"3",
 		('0' & iA) or ('0' & iB) 			when x"4",
 		not('0' & iA) 							when x"5",
 		('0' & iA) + 1 						when x"6",
 		('0' & iA) + x"FFFF" 				when x"7", -- x"FFFF" je -1
-		iA(15 downto 1) & '0' 				when x"8",
+		iA(15 downto 0) & '0' 				when x"8",
 		iA(0) & '0' & iA(15 downto 1) 	when x"9",
 		not('0' & iA) + 1 					when x"A",
 		iA(0) & iA(15) & iA(15 downto 1) when x"B",
-		x"FFFF" 									when others;-- vraca default
+		'1' & x"FFFF" 									when others;-- vraca default
 	
 	oCARRY <= sAUX(16);
 	oSIGN <= sAUX(15);

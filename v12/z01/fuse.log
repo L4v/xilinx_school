@@ -5,9 +5,27 @@ Turning on mult-threading, number of parallel sub-compilation jobs: 8
 Determining compilation order of HDL files
 Parsing VHDL file "/home/hk-47/workspace/xilinx/v12/z01/reg.vhd" into library work
 Parsing VHDL file "/home/hk-47/workspace/xilinx/v12/z01/mux.vhd" into library work
+Parsing VHDL file "/home/hk-47/workspace/xilinx/v12/z01/control_unit.vhd" into library work
 Parsing VHDL file "/home/hk-47/workspace/xilinx/v12/z01/alu.vhd" into library work
 Parsing VHDL file "/home/hk-47/workspace/xilinx/v12/z01/cpu_top.vhd" into library work
 Parsing VHDL file "/home/hk-47/workspace/xilinx/v12/z01/z01_tb.vhd" into library work
 Starting static elaboration
-ERROR:HDLCompiler:410 - "/home/hk-47/workspace/xilinx/v12/z01/alu.vhd" Line 50: Expression has 16 elements ; expected 17
-ERROR:Simulator:777 - Static elaboration of top level VHDL design unit z01_tb in library work failed
+Completed static elaboration
+Fuse Memory Usage: 84600 KB
+Fuse CPU Usage: 1930 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling architecture behavioral of entity reg [reg_default]
+Compiling architecture behavioral of entity mux [mux_default]
+Compiling architecture behavioral of entity alu [alu_default]
+Compiling architecture behavioral of entity control_unit [control_unit_default]
+Compiling architecture behavioral of entity cpu_top [cpu_top_default]
+Compiling architecture behavior of entity z01_tb
+Time Resolution for simulation is 1ps.
+Compiled 15 VHDL Units
+Built simulation executable /home/hk-47/workspace/xilinx/v12/z01/z01_tb_isim_beh.exe
+Fuse Memory Usage: 656912 KB
+Fuse CPU Usage: 2170 ms
+GCC CPU Usage: 1480 ms

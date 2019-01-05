@@ -83,12 +83,9 @@ BEGIN
    -- Stimulus process
    stim_proc: process
    begin		
-      -- hold reset state for 100 ns.
-      wait for 100 ns;	
-
+      inRST <= '1';
+		iDATA <= x"0008";
       wait for iCLK_period*10;
-
-      -- insert stimulus here 
 
       wait;
    end process;

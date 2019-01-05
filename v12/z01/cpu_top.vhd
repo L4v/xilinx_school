@@ -46,18 +46,23 @@ architecture Behavioral of cpu_top is
 	signal sMUXA_SEL, sMUXB_SEL, sALU_SEL : std_logic_vector(3 downto 0);
 	signal sZERO, sSIGN, sCARRY : std_logic;
 	
+	-- KOMPONENTE:
+	
+	-- REGISTAR
 	component reg
 		port(iCLK, inRST, iWE : in std_logic;
 			  iD 			 	 	 : in std_logic_vector(15 downto 0);
 			  oQ				 	 : out std_logic_vector(15 downto 0));
 	end component;
 	
+	-- MULTIPLEKSER
 	component mux
 		port(iD0, iD1, iD2, iD3, iD4, iD5, iD6, iD7, iD8 : in std_logic_vector(15 downto 0);
 			  iSEL											 : in std_logic_vector(3 downto 0);
 			  oQ											 	 : out std_logic_vector(15 downto 0));
 	end component;
 	
+	-- ARITMETICKO LOGICKA JEDINICA
 	component alu
 		port(iA, iB  				  : in std_logic_vector(15 downto 0);
 			  iSEL 				  	  : in std_logic_vector(3 downto 0);
@@ -65,6 +70,19 @@ architecture Behavioral of cpu_top is
 			  oZERO, oSIGN, oCARRY : out std_Logic);
 	end component;
 
+	-- KONTROLNA JEDINICA
+	component control_unit
+		port(iCLK 		: in  STD_LOGIC;
+           inRST 		: in  STD_LOGIC;
+           iZERO 		: in  STD_LOGIC;
+           iSIGN 		: in  STD_LOGIC;
+           iCARRY 	: in  STD_LOGIC;
+           oREG_WE 	: out  STD_LOGIC_VECTOR (7 downto 0);
+           oMUXA_SEL : out  STD_LOGIC_VECTOR (3 downto 0);
+           oMUXB_SEL : out  STD_LOGIC_VECTOR (3 downto 0);
+           oALU_SEL 	: out  STD_LOGIC_VECTOR (3 downto 0));
+	end component;
+	
 begin
 
 	-- REGISTRI R0 - R7
@@ -84,5 +102,11 @@ begin
 	-- ARITMETICKO LOGICKA JEDINICA
 	ALU_I : alu port map(sMUXA, sMUXB, sALU_SEL, sRESULT, sZERO, sSIGN, sCARRY);
 
+	-- KONTROLNA JEDINICA
+	C_UNIT : control_unit port map(iCLK, inRST,sZERO, sSIGN, sCARRY, sREG_WE, sMUXA_SEL,
+												sMUXB_SEL, sALU_SEL);
+												
+	oDATA <= sRESULT;
+	
 end Behavioral;
 

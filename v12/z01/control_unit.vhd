@@ -52,34 +52,10 @@ architecture Behavioral of control_unit is
 begin
 
 	process(iCLK, inRST) begin
-		if(inRST <= '0') then
-			sCNT <= x"0";
-			sTC <= '0';
-		elsif(rising_edge(iCLK)) then
-			sCNT <= sCNTN;
-			sTC <= sTCN;
-		end if;
-	end process;
-	
-	process(sCNT) begin
-		if(sCNT = x"F") then
-			sCNTN <= x"0";
-			sTCN <= '1';
-		else
-			sCNTN <= sCNT + 1;
-			sTCN <= '0';
-		end if;
-	end process;
-
-	process(iCLK, inRST, sTC) begin
 		if(inRST = '0') then
 			sSTATE <= S0;
 		elsif(rising_edge(iCLK)) then
-			if(sTC <= '1') then
-				sSTATE <= sNEXT;
-			else
-				sSTATE <= sSTATE;
-			end if;
+			sSTATE <= sNEXT;
 		end if;
 	end process;
 
@@ -120,7 +96,7 @@ begin
 --				oMUXB_SEL <= x"0"; -- '-', nebitno
 --				oALU_SEL <= x"F"; -- '-', nebitno
 --		end case;
-	-- "Slozeniji" zadatak: R0 <= iDATA(=8); R1 <= R0 - 1; R2 <= -R1;
+--	 "Slozeniji" zadatak: R0 <= iDATA(=8); R1 <= R0 - 1; R2 <= -R1;
 		case sSTATE is
 			when S0 =>
 				oREG_WE <= x"01";

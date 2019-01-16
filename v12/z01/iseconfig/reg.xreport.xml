@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2019-01-16T21:57:28</DateModified>
+  <DateModified>2019-01-05T12:28:22</DateModified>
   <ModuleName>cpu_top</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>/home/hk-47/workspace/xilinx/v12/z01/iseconfig/cpu_top.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/hk-47/workspace/xilinx/v12/z01/</ImplementationReportsDirectory>
-  <DateInitialized>2019-01-05T15:09:54</DateInitialized>
+  <SavedFilePath>/home/hk-47/workspace/xilinx/v12/z01/iseconfig/reg.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/hk-47/workspace/xilinx/v12/z01</ImplementationReportsDirectory>
+  <DateInitialized>2019-01-05T12:17:33</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>

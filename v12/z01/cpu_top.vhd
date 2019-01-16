@@ -33,6 +33,10 @@ entity cpu_top is
     Port ( iCLK : in  STD_LOGIC;
            inRST : in  STD_LOGIC;
            iDATA : in  STD_LOGIC_VECTOR (15 downto 0);
+			  iINSTR : in std_logic_vector(14 downto 0);
+			  oPC : out std_logic_vector(15 downto 0);
+			  oADDR : out std_logic_vector(15 downto 0);
+			  oMEM_WE : out std_logic;
            oDATA : out  STD_LOGIC_VECTOR (15 downto 0));
 end cpu_top;
 
@@ -41,12 +45,19 @@ architecture Behavioral of cpu_top is
 	type NIZ is array (0 to 7) of std_logic_vector(15 downto 0);
 	
 	signal sR : NIZ;
-	signal sRESULT, sMUXA, sMUXB : std_logic_vector(15 downto 0);
+	signal sRESULT, sMUXA, sMUXB, sPC, sPC_IN : std_logic_vector(15 downto 0);
 	signal sREG_WE : std_logic_vector(7 downto 0);
 	signal sMUXA_SEL, sMUXB_SEL, sALU_SEL : std_logic_vector(3 downto 0);
-	signal sZERO, sSIGN, sCARRY : std_logic;
+	signal sZERO, sSIGN, sCARRY, sMEM_WE, sPC_WE, sPC_LOAD : std_logic;
 	
 	-- KOMPONENTE:
+	
+	-- PROGRAMSKI BROJAC
+	component cnt
+		port(iCLK, inRST, iEN, iLOAD : in std_logic;
+			  iD							  : in std_logic_vector(15 downto 0);
+			  oQ 							  : out std_logic_vector(15 downto 0));
+	end component;
 	
 	-- REGISTAR
 	component reg
@@ -77,6 +88,11 @@ architecture Behavioral of cpu_top is
            iZERO 		: in  STD_LOGIC;
            iSIGN 		: in  STD_LOGIC;
            iCARRY 	: in  STD_LOGIC;
+			  iINSTR		: in STD_LOGIC_VECTOR(14 downto 0);
+			  oPC_EN 	: out std_logic;
+			  oPC_LOAD	: out std_logic;
+			  oPC_IN 	: out std_logic_vector(15 downto 0);
+			  oMEM_WE	: out std_logic;
            oREG_WE 	: out  STD_LOGIC_VECTOR (7 downto 0);
            oMUXA_SEL : out  STD_LOGIC_VECTOR (3 downto 0);
            oMUXB_SEL : out  STD_LOGIC_VECTOR (3 downto 0);
@@ -103,9 +119,13 @@ begin
 	ALU_I : alu port map(sMUXA, sMUXB, sALU_SEL, sRESULT, sZERO, sSIGN, sCARRY);
 
 	-- KONTROLNA JEDINICA
-	C_UNIT : control_unit port map(iCLK, inRST,sZERO, sSIGN, sCARRY, sREG_WE, sMUXA_SEL,
-												sMUXB_SEL, sALU_SEL);
+	C_UNIT : control_unit port map(iCLK, inRST,sZERO, sSIGN, sCARRY, iINSTR, sPC_EN, sPC_LOAD, sPC_IN, sMEM_WE,
+							sREG_WE, sMUXA_SEL, sMUXB_SEL, sALU_SEL);
 												
+	P_CNT : cnt port map(iCLK, inRST, sPC_EN, sPC_LOAD, sPC_IN, sPC);
+	
+	oPC <= sPC;
+	oMEM_WE <= sMEM_WE;
 	oDATA <= sRESULT;
 	
 end Behavioral;

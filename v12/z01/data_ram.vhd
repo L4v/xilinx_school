@@ -20,6 +20,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use IEEE.NUMERIC_STD.all;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -55,12 +56,14 @@ begin
 			end loop;
 		elsif(falling_edge(iCLK)) then
 			if (iWE = '1') then
-				sR(conv_integer(unsigned(iA))) <= iD;
+				sR(to_integer(unsigned(iA))) <= iD;
 			else
-				sRAM <= sR(conv_integer(unsigned(iA)));
+				sRAM <= sR(to_integer(unsigned(iA)));
 			end if;
 		end if;
 	end process;
+	
+	sR(0) <= x"04";
 
 	oQ <= sRAM;
 

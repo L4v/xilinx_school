@@ -1,0 +1,41 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -relaunch -intstyle "ise" -incremental -lib "secureip" -o "/home/hk-47/workspace/xilinx/v13/zad_tb_isim_beh.exe" -prj "/home/hk-47/workspace/xilinx/v13/zad_tb_beh.prj" "work.zad_tb" 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "/home/hk-47/workspace/xilinx/v13/reg.vhd" into library work
+Parsing VHDL file "/home/hk-47/workspace/xilinx/v13/mux.vhd" into library work
+Parsing VHDL file "/home/hk-47/workspace/xilinx/v13/control_unit.vhd" into library work
+Parsing VHDL file "/home/hk-47/workspace/xilinx/v13/cnt.vhd" into library work
+Parsing VHDL file "/home/hk-47/workspace/xilinx/v13/alu.vhd" into library work
+Parsing VHDL file "/home/hk-47/workspace/xilinx/v13/instr_rom.vhd" into library work
+Parsing VHDL file "/home/hk-47/workspace/xilinx/v13/data_ram.vhd" into library work
+Parsing VHDL file "/home/hk-47/workspace/xilinx/v13/cpu_top.vhd" into library work
+Parsing VHDL file "/home/hk-47/workspace/xilinx/v13/top.vhd" into library work
+Parsing VHDL file "/home/hk-47/workspace/xilinx/v13/zad_tb.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 86232 KB
+Fuse CPU Usage: 1980 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package numeric_std
+Compiling architecture behavioral of entity reg [reg_default]
+Compiling architecture behavioral of entity mux [mux_default]
+Compiling architecture behavioral of entity alu [alu_default]
+Compiling architecture behavioral of entity control_unit [control_unit_default]
+Compiling architecture behavioral of entity cnt [cnt_default]
+Compiling architecture behavioral of entity cpu_top [cpu_top_default]
+Compiling architecture behavioral of entity data_ram [data_ram_default]
+Compiling architecture behavioral of entity instr_rom [instr_rom_default]
+Compiling architecture behavioral of entity top [top_default]
+Compiling architecture behavior of entity zad_tb
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 24 VHDL Units
+Built simulation executable /home/hk-47/workspace/xilinx/v13/zad_tb_isim_beh.exe
+Fuse Memory Usage: 662560 KB
+Fuse CPU Usage: 2430 ms
+GCC CPU Usage: 510 ms

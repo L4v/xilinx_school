@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "/home/hk-47/workspace/xilinx/v13/zad_tb_isim_beh.exe" -prj "/home/hk-47/workspace/xilinx/v13/zad_tb_beh.prj" "work.zad_tb" 

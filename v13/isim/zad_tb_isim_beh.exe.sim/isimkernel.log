@@ -1,0 +1,30 @@
+Command line:
+   zad_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  46661
+
+Mon Jan 21 00:30:33 2019
+
+
+ Elaboration Time: 0.04 sec
+
+ Current Memory Usage: 184.721 Meg
+
+ Total Signals          : 154
+ Total Nets             : 1129
+ Total Signal Drivers   : 52
+ Total Blocks           : 30
+ Total Primitive Blocks : 19
+ Total Processes        : 44
+ Total Traceable Variables  : 24
+ Total Scalar Nets and Variables : 1639
+Total Line Count : 298
+Total Line Count : 298
+
+ Total Simulation Time: 0.15 sec
+
+ Current Memory Usage: 260.223 Meg
+
+Mon Jan 21 00:32:02 2019
+

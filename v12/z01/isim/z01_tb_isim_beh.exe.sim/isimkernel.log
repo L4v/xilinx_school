@@ -1,0 +1,31 @@
+Command line:
+   z01_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  35955
+
+Sun Jan 20 22:47:09 2019
+
+
+ Elaboration Time: 0.05 sec
+
+ Current Memory Usage: 184.721 Meg
+
+ Total Signals          : 154
+ Total Nets             : 1129
+ Total Signal Drivers   : 53
+ Total Blocks           : 30
+ Total Primitive Blocks : 19
+ Total Processes        : 45
+ Total Traceable Variables  : 24
+ Total Scalar Nets and Variables : 1639
+In process data_ram.vhd:66 
+ Target Size 16 and source size 8 for array dimension 0 does not match. 
+
+
+ Total Simulation Time: 0.05 sec
+
+ Current Memory Usage: 260.223 Meg
+
+Sun Jan 20 22:47:13 2019
+

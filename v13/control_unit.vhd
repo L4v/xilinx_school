@@ -53,18 +53,29 @@ architecture Behavioral of control_unit is
 --	signal sSTATE, sNEXT : t_STATE;
 --	signal sCNT, sCNTN : std_logic_vector(3 downto 0);
 --	signal sTC, sTCN	 : std_logic;
-	signal sADD : std_logic_vector(15 downto 0);
-	signal sCU : std_logic_vector(14 downto 0);
-	signal sREGZ, sREGX, sREGY : std_logic_vector(7 downto 0);
+	signal sADD 							: std_logic_vector(15 downto 0);
+	signal sCU, sCUN 						: std_logic_vector(14 downto 0);
+	signal sREGZ, sREGX, sREGY 		: std_logic_vector(7 downto 0);
+	signal sZ, sZN, sC, sCN, sS, sSN : std_logic;
 	
 begin
-	process(iCLK, inRST) begin
+	process(iCLK, inRST, iINSTR, iZERO, iCARRY, iSIGN) begin
 		if(inRST = '0') then
 			sCU <= "000000000000000";
 		elsif(rising_edge(iCLK)) then
 			sCU <= iINSTR;
+			sZ  <= iZERO;
+			sC  <= iCARRY;
+			sS  <= iSIGN;
 		end if;
 	end process;
+--	
+--	process (iINSTR, iZERO, iCARRY, iSIGN) begin
+--		sCUN <= iINSTR;
+--		sZN <= iZERO;
+--		sCN <= iCARRY;
+--		sSN <= iSIGN;
+--	end process;
 	
 	with sCU(8 downto 6) select sREGZ <=
 		x"01" when "000",
@@ -195,14 +206,14 @@ begin
 --		end case;
 --	end process;
 
-	process(sCU, sREGZ, sADD, iZERO, iCARRY, iSIGN) begin
+	process(sCU, sREGZ, sADD, sZ, sC, sS) begin
 		case sCU(14 downto 9) is
 			when "000000" =>
 				oREG_WE <= sREGZ;
 				oMUXA_SEL <= '0' & sCU(5 downto  3);
 				oMUXB_SEL <= "0000"; -- "-"
 				oALU_SEL <= x"0";
-				oPC_EN <= '0';
+				oPC_EN <= '1';
 				oPC_LOAD <= '0';
 				oPC_IN <= x"0000";
 				oMEM_WE <= '0';
@@ -211,7 +222,7 @@ begin
 				oMUXA_SEL <= '0' & sCU(5 downto 3);
 				oMUXB_SEL <= '0' & sCU(2 downto 0);
 				oALU_SEL <= x"1";
-				oPC_EN <= '0';
+				oPC_EN <= '1';
 				oPC_LOAD <= '0';
 				oPC_IN <= x"0000";
 				oMEM_WE <= '0';
@@ -220,7 +231,7 @@ begin
 				oMUXA_SEL <= '0' & sCU(5 downto 3);
 				oMUXB_SEL <= '0' & sCU(2 downto 0);
 				oALU_SEL <= x"2";
-				oPC_EN <= '0';
+				oPC_EN <= '1';
 				oPC_LOAD <= '0';
 				oPC_IN <= x"0000";
 				oMEM_WE <= '0';
@@ -229,7 +240,7 @@ begin
 				oMUXA_SEL <= '0' & sCU(5 downto 3);
 				oMUXB_SEL <= '0' & sCU(2 downto 0);
 				oALU_SEL <= x"3";
-				oPC_EN <= '0';
+				oPC_EN <= '1';
 				oPC_LOAD <= '0';
 				oPC_IN <= x"0000";
 				oMEM_WE <= '0';
@@ -238,7 +249,7 @@ begin
 				oMUXA_SEL <= '0' & sCU(5 downto 3);
 				oMUXB_SEL <= '0' & sCU(2 downto 0);
 				oALU_SEL <= x"4";
-				oPC_EN <= '0';
+				oPC_EN <= '1';
 				oPC_LOAD <= '0';
 				oPC_IN <= x"0000";
 				oMEM_WE <= '0';
@@ -247,7 +258,7 @@ begin
 				oMUXA_SEL <= '0' & sCU(5 downto 3);
 				oMUXB_SEL <= "0000"; -- "-"
 				oALU_SEL <= x"5";
-				oPC_EN <= '0';
+				oPC_EN <= '1';
 				oPC_LOAD <= '0';
 				oPC_IN <= x"0000";
 				oMEM_WE <= '0';
@@ -256,7 +267,7 @@ begin
 				oMUXA_SEL <= '0' & sCU(5 downto 3);
 				oMUXB_SEL <= "0000";
 				oALU_SEL <= x"6";
-				oPC_EN <= '0';
+				oPC_EN <= '1';
 				oPC_LOAD <= '0';
 				oPC_IN <= x"0000";
 				oMEM_WE <= '0';
@@ -265,7 +276,7 @@ begin
 				oMUXA_SEL <= '0' & sCU(5 downto 3);
 				oMUXB_SEL <= "0000";
 				oALU_SEL <= x"7";
-				oPC_EN <= '0';
+				oPC_EN <= '1';
 				oPC_LOAD <= '0';
 				oPC_IN <= x"0000";
 				oMEM_WE <= '0';
@@ -274,7 +285,7 @@ begin
 				oMUXA_SEL <= '0' & sCU(5 downto 3);
 				oMUXB_SEL <= "0000";
 				oALU_SEL <= x"8";
-				oPC_EN <= '0';
+				oPC_EN <= '1';
 				oPC_LOAD <= '0';
 				oPC_IN <= x"0000";
 				oMEM_WE <= '0';
@@ -283,7 +294,7 @@ begin
 				oMUXA_SEL <= '0' & sCU(5 downto 3);
 				oMUXB_SEL <= "0000";
 				oALU_SEL <= x"9";
-				oPC_EN <= '0';
+				oPC_EN <= '1';
 				oPC_LOAD <= '0';
 				oPC_IN <= x"0000";
 				oMEM_WE <= '0';
@@ -292,7 +303,7 @@ begin
 				oMUXA_SEL <= '0' & sCU(5 downto 3);
 				oMUXB_SEL <= "0000";
 				oALU_SEL <= x"A";
-				oPC_EN <= '0';
+				oPC_EN <= '1';
 				oPC_LOAD <= '0';
 				oPC_IN <= x"0000";
 				oMEM_WE <= '0';
@@ -301,7 +312,7 @@ begin
 				oMUXA_SEL <= '0' & sCU(5 downto 3);
 				oMUXB_SEL <= "0000";
 				oALU_SEL <= x"B";
-				oPC_EN <= '0';
+				oPC_EN <= '1';
 				oPC_LOAD <= '0';
 				oPC_IN <= x"0000";
 				oMEM_WE <= '0';
@@ -314,13 +325,13 @@ begin
 				oPC_LOAD <= '1';
 				oPC_IN <= sADD;
 				oMEM_WE <= '0';
-			when "010001" =>
+			when "010001" =>--010001000011111
 				oREG_WE <= x"00";
 				oMUXA_SEL <= "0000";
 				oMUXB_SEL <= "0000";
 				oALU_SEL <= x"F";
 				oPC_EN <= '1';
-				if (iZERO = '1') then
+				if (sZ = '1') then
 					oPC_LOAD <= '1';
 				else
 					oPC_LOAD <= '0';
@@ -333,7 +344,7 @@ begin
 				oMUXB_SEL <= "0000";
 				oALU_SEL <= x"F";
 				oPC_EN <= '1';
-				if (iSIGN = '1') then
+				if (sS = '1') then
 					oPC_LOAD <= '1';
 				else
 					oPC_LOAD <= '0';
@@ -346,7 +357,7 @@ begin
 				oMUXB_SEL <= "0000";
 				oALU_SEL <= x"F";
 				oPC_EN <= '1';
-				if (iCARRY = '1') then
+				if (sC = '1') then
 					oPC_LOAD <= '1';
 				else
 					oPC_LOAD <= '0';
@@ -359,7 +370,7 @@ begin
 				oMUXB_SEL <= "0000";
 				oALU_SEL <= x"F";
 				oPC_EN <= '1';
-				if (iZERO = '0') then
+				if (sZ = '0') then
 					oPC_LOAD <= '1';
 				else
 					oPC_LOAD <= '0';
@@ -372,7 +383,7 @@ begin
 				oMUXB_SEL <= "0000";
 				oALU_SEL <= x"F";
 				oPC_EN <= '1';
-				if (iSIGN = '0') then
+				if (sS = '0') then
 					oPC_LOAD <= '1';
 				else
 					oPC_LOAD <= '0';
@@ -385,7 +396,7 @@ begin
 				oMUXB_SEL <= "0000";
 				oALU_SEL <= x"F";
 				oPC_EN <= '1';
-				if (iCARRY = '0') then
+				if (sC = '0') then
 					oPC_LOAD <= '1';
 				else
 					oPC_LOAD <= '0';
@@ -412,12 +423,12 @@ begin
 				oMEM_WE <= '1';
 			when others =>
 				oREG_WE <= x"00";
-				oMUXA_SEL <= "0000";
-				oMUXB_SEL <= "0000";
-				oALU_SEL <= x"F";
-				oPC_EN <= '1';
+				oMUXA_SEL <= x"0";
+				oMUXB_SEL <= x"0";
+				oALU_SEL <= x"0";
+				oPC_EN <= '0';
 				oPC_LOAD <= '0';
-				oPC_IN <= sADD;
+				oPC_IN <= x"FFFF";
 				oMEM_WE <= '0';
 			end case;
 	end process;

@@ -49,7 +49,7 @@ begin
 	with iSEL select sAUX <=
 		('0' & iA) 								when x"0",
 		('0' & iA) + ('0' & iB) 			when x"1",
-		('0' & iA) - ('0' & iB)			   when x"2", -- drugi komplement  (not('0' & iB) + 1)
+		('0' & iA) + (not('0' & iB) + 1) when x"2", -- drugi komplement  (not('0' & iB) + 1)
 		('0' & iA) and ('0' & iB) 			when x"3",
 		('0' & iA) or ('0' & iB) 			when x"4",
 		not('0' & iA) 							when x"5",

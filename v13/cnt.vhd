@@ -45,25 +45,50 @@ architecture Behavioral of cnt is
 
 begin
 
-	process (iCLK, inRST) begin
-		if(inRST = '0') then
+	process (iCLK, inRST, iEN, iLOAD, iD) begin
+		if (inRST = '0') then
 			sCNT <= x"0000";
-		elsif(rising_edge(iCLK)) then
-			sCNT <= sCNTN;
+		elsif (rising_edge(iCLK)) then
+			if (iEN = '1') then
+				if (iLOAD = '1') then
+					sCNT <= iD;
+				else
+					sCNT <= sCNTN;
+				end if;
+			else
+				sCNT <= sCNT;
+			end if;
 		end if;
 	end process;
 	
-	process (sCNT, iEN, iLOAD, iD) begin
-		if(iEN = '1') then
-				if(iLOAD = '1') then
-					sCNTN <= iD;
-				else
-					sCNTN <= sCNTN;
-				end if;
-			else
-				sCNTN <= sCNT + 1;
-			end if;
-	end process;
+		sCNTN <= sCNT + 1;
+	
+--	process (sCNT, iEN, iLOAD, iD) begin
+--		if(iEN = '1') then
+--			if(iLOAD = '1') then
+--				sCNTN <= iD;
+--			else
+--				sCNTN <= sCNT + 1;
+--			end if;
+--		else
+--			sCNTN <= sCNT;
+--		end if;
+--	end process;
+--process (iCLK, inRST, iEN, iLOAD) begin
+--	if(inRST <= '0') then
+--		sCNT <= x"0000";
+--	elsif(rising_edge(iCLK)) then
+--			if(iEN = '1') then
+--			if(iLOAD = '1') then
+--				sCNT <= iD;
+--			else
+--				sCNT <= sCNT + 1;
+--			end if;
+--		else
+--			sCNT <= sCNT;
+--		end if;
+--	end if;
+--end process;
 	
 	oQ <= sCNT;
 	

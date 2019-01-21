@@ -36,8 +36,9 @@
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
     <transform xil_pn:end_ts="1548021012" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1548021012">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1548025914" xil_pn:in_ck="9037764838797307958" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1548025914">
+    <transform xil_pn:end_ts="1548084910" xil_pn:in_ck="9037764838797307958" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1548084910">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
@@ -55,11 +56,11 @@
       <outfile xil_pn:name="top.vhd"/>
       <outfile xil_pn:name="zad_tb.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1548022599" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="5097146615299533130" xil_pn:start_ts="1548022599">
+    <transform xil_pn:end_ts="1548075931" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="5097146615299533130" xil_pn:start_ts="1548075931">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1548022599" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-2117414503947824696" xil_pn:start_ts="1548022599">
+    <transform xil_pn:end_ts="1548075931" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-2117414503947824696" xil_pn:start_ts="1548075931">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -67,7 +68,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1548025914" xil_pn:in_ck="9037764838797307958" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1548025914">
+    <transform xil_pn:end_ts="1548084910" xil_pn:in_ck="9037764838797307958" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1548084910">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
@@ -86,10 +87,11 @@
       <outfile xil_pn:name="top.vhd"/>
       <outfile xil_pn:name="zad_tb.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1548025919" xil_pn:in_ck="9037764838797307958" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="8937019013456985076" xil_pn:start_ts="1548025914">
+    <transform xil_pn:end_ts="1548084917" xil_pn:in_ck="9037764838797307958" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="8937019013456985076" xil_pn:start_ts="1548084910">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
@@ -101,9 +103,10 @@
       <outfile xil_pn:name="zad_tb_beh.prj"/>
       <outfile xil_pn:name="zad_tb_isim_beh.exe"/>
     </transform>
-    <transform xil_pn:end_ts="1548025919" xil_pn:in_ck="6701157670435578383" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-4118374924879301311" xil_pn:start_ts="1548025919">
+    <transform xil_pn:end_ts="1548084917" xil_pn:in_ck="6701157670435578383" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-4118374924879301311" xil_pn:start_ts="1548084917">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>

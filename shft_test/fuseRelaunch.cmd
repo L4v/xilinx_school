@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "/home/hk-47/workspace/xilinx/shft_test/shft_test_tb_isim_beh.exe" -prj "/home/hk-47/workspace/xilinx/shft_test/shft_test_tb_beh.prj" "work.shft_test_tb" 

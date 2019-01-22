@@ -49,16 +49,18 @@ architecture Behavioral of data_ram is
 
 begin
 
-	process(iCLK, inRST, iWE, iA) begin
-		if(inRST = '0') then
-			for i in 0 to 31 loop
-				sR(i) <= x"0000";
-			end loop;
-		elsif(falling_edge(iCLK)) then
-			if (iWE = '1') then
-				sR(to_integer(unsigned(iA))) <= iD;
+	process(iCLK) begin
+		if(falling_edge(iCLK)) then		
+			if(inRST = '0') then
+				for i in 0 to 31 loop
+					sR(i) <= x"0000";
+				end loop;
 			else
-				sRAM <= sR(to_integer(unsigned(iA)));
+				if (iWE = '1') then
+					sR(to_integer(unsigned(iA))) <= iD;
+				else
+					sRAM <= sR(to_integer(unsigned(iA)));
+				end if;
 			end if;
 		end if;
 	end process;

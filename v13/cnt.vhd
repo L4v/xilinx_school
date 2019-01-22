@@ -45,7 +45,7 @@ architecture Behavioral of cnt is
 
 begin
 
-	process (iCLK, inRST, iEN, iLOAD, iD) begin
+	process (iCLK, inRST) begin
 		if (inRST = '0') then
 			sCNT <= x"0000";
 		elsif (rising_edge(iCLK)) then
@@ -61,7 +61,7 @@ begin
 		end if;
 	end process;
 	
-		sCNTN <= sCNT + 1;
+	sCNTN <= sCNT + 1;
 	
 --	process (sCNT, iEN, iLOAD, iD) begin
 --		if(iEN = '1') then

@@ -1,0 +1,2 @@
+vhdl work "shft_test.vhd"
+vhdl work "shft_test_tb.vhd"

@@ -46,17 +46,19 @@ begin
 		"001000100100000" when "00010", -- R4 <- shl(R4) R4 = 4
 		"110000000100111" when "00011", -- st R7, R4 cuva R4 na 0x0000 adresu
 		"100000011000111" when "00100", -- ld R3, R7 ucitava u R3 sa 0x0000 adrese
-		--"000110011011000" when "00101", -- R3 <- R3 + 1
-		"000010111011010" when "00101", -- R7(nebitno) <- R3 - R2, za proveru da li je 0
-		"010001000011110" when "00110", -- jmpz 11111 (NOP)
-		"000110001001000" when "00111", -- R1 <- R1 + 1, tu ce biti rezultat
-		"000000000010000" when "01000", -- R0 <- R2, za brojanje mnozenja sa 2
-		"000110010010000" when "01001", -- R2 <- R2 + 1
-		"000000000000000" when "01010", -- R0 <- R0, za proveru = 0
-		"010001000000101" when "01011", -- jmpz 00110+
-		"001000001001000" when "01100", -- R1 <- shl(R1), mnozenje sa 2
-		"000111000000000" when "01101", -- R0 <- R0 - 1, smanjujemo brojac
-		"010000000001010" when "01110", -- jmp 01011+
+		"000110011011000" when "00101", -- R3 <- R3 + 1
+		"000010111011010" when "00110", -- R7(nebitno) <- R3 - R2, za proveru da li je 0
+		"010001000011110" when "00111", -- jmpz 11111 (NOP)
+		"000000010010000" when "01000", -- R2 <- R2, za proveru = 0
+		"010001000001100" when "01001", -- jmpz 01100
+		"000110001001000" when "01010", -- R1 <- R1 + 1, tu ce biti rezultat
+		"000000000010000" when "01011", -- R0 <- R2, za brojanje mnozenja sa 2
+		"000110010010000" when "01100", -- R2 <- R2 + 1
+		"000000000000000" when "01101", -- R0 <- R0, za proveru = 0
+		"010001000000110" when "01110", -- jmpz 00110+
+		"001000001001000" when "01111", -- R1 <- shl(R1), mnozenje sa 2
+		"000111000000000" when "10000", -- R0 <- R0 - 1, smanjujemo brojac
+		"010000000001101" when "10001", -- jmp 01101+
 		"111111111111111" when others; -- R6 <- R6, NOP
 		
 	--oQ <= sROM;

@@ -56,19 +56,22 @@ architecture Behavioral of control_unit is
 	signal sADD 							: std_logic_vector(15 downto 0);
 	signal sCU, sCUN 						: std_logic_vector(14 downto 0);
 	signal sREGZ, sREGX, sREGY 		: std_logic_vector(7 downto 0);
-	signal sZ, sZN, sC, sCN, sS, sSN : std_logic;
+	signal sZ, sC, sS : std_logic;
 	
 begin
-	process(iCLK, inRST, iINSTR, iZERO, iCARRY, iSIGN) begin
+	process(iCLK, inRST) begin
 		if(inRST = '0') then
-			sCU <= "000000000000000";
+			sZ  <= '0';
+			sC  <= '0';
+			sS  <= '0';
 		elsif(rising_edge(iCLK)) then
-			sCU <= iINSTR;
 			sZ  <= iZERO;
 			sC  <= iCARRY;
 			sS  <= iSIGN;
 		end if;
 	end process;
+	
+	sCU <= iINSTR;
 --	
 --	process (iINSTR, iZERO, iCARRY, iSIGN) begin
 --		sCUN <= iINSTR;
